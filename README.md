@@ -34,11 +34,11 @@ Each lab and project will be organized into its own dedicated folder within this
 
 ## Getting Help
 
-If you encounter any issues or have questions about the labs or projects, please refer to the [Course Documentation](#) or reach out to the course instructor.
+If you encounter any issues or have questions about the labs or projects, please email me at tds22@njit.edu. 
 
 ---
 
-Happy coding and best of luck with your Android Development class!
+Happy coding - Android Development class!
 
 
 

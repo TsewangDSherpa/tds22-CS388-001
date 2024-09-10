@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Prework Intro</string>
+    <string name="Introduction">\t\t\t\t\t\t\t\t\t Hello! I am Tsewang Sherpa\n I am striving to be a proficient software engineer.\n Currently, learning Andriod Development using Kotlin!\n\n \t\t\t\t\t\t\t\t\tClick the button to say Hello👋</string>
+    <string name="greetButton">Greet 👋</string>
+    <string name="portraitImg">portraitImg</string>
+    <string name="my_first_android_application">My First Android Application</string>
+</resources>

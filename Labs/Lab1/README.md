@@ -6,7 +6,7 @@ Submitted by: **Tsewang Sherpa** <!-- Replace 'Your Name Here' with your actual 
 
 **Tap Counter App** is an Android app inspired by idle tap games, allowing users to accumulate points through taps, which can be exchanged for upgrades.
 
-Time spent: **X** hours spent in total <!-- Replace 'X' with the number of hours you spent on this project -->
+Time spent: **1** hours spent in total <!-- Replace 'X' with the number of hours you spent on this project -->
 
 ## Required Features
 

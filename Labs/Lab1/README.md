@@ -1,47 +1,38 @@
-# Android Lab01*
+# Lab 1: Tap Counter App
 
-Submitted by: **Tsewang Sherpa**
+Course Link: [CodePath Android Course](https://courses.codepath.org/courses/and102/unit/1#!labs)
 
+Submitted by: **Your Name Here** <!-- Replace 'Your Name Here' with your actual name -->
 
+**Tap Counter App** is an Android app inspired by idle tap games, allowing users to accumulate points through taps, which can be exchanged for upgrades.
 
-Time spent: **1** hours spent in total
+Time spent: **X** hours spent in total <!-- Replace 'X' with the number of hours you spent on this project -->
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-* [x] User can see a number displayed on the screen. The number starts at 0.
-* [x] User can tap on a button to see the number displayed increase by 1.
-* [x] Toast with message appears when button is pressed 
+- [X] **User can see a number displayed on the screen. The number starts at 0.**
+    - ![Image/GIF showing the initial display of the number](http://i.imgur.com/link/to/your/gif/file.gif) <!-- Replace this link with your actual image/GIF link -->
 
-The following **optional** features is implemented:
+- [X] **User can tap on a button to see the number displayed increase by 1.**
+    - ![Image/GIF showing the number increase on button tap](http://i.imgur.com/link/to/your/gif/file.gif) <!-- Replace this link with your actual image/GIF link -->
 
-* [x] User can exchange number of taps accumulated for upgrades:
-* [x] Ideas for possible upgrades:
-* [x] User can exchange 100 taps for an upgrade where each tap will count as 2 taps
-* [x] User can exchange 100 taps for an icon button instead of the standard one.
-* [x] Customize the app with a theme. For example, you can have a dog background and a paw print button to give your app a dog theme.
+## Stretch Features
 
-## Video Walkthrough
+The following **optional** features are implemented:
 
-Here's a walkthrough of implemented features:
+- [X] User can exchange number of taps accumulated for upgrades (e.g., each tap counts as 2 taps).
+    - ![Image/GIF showing the upgrade process](http://i.imgur.com/link/to/your/gif/file.gif) <!-- Replace this link with your actual image/GIF link -->
 
-<img src='./prework.gif' title='GIF Walkthrough' width='' alt='GIF Walkthrough' />
+- [X] User can customize the app's theme (e.g., using a dog background and a paw print button).
+    - ![Image/GIF showing theme customization](http://i.imgur.com/link/to/your/gif/file.gif) <!-- Replace this link with your actual image/GIF link -->
 
-<!-- Replace this with whatever GIF tool you used! -->
-GIF created with [Kap] (https://getkap.co/) for macOS
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+
 
 ## Notes
 
-It was really interesting to work with Android Studio and Create an android application. 
-Learning new language (Kotlin) has been fun so far, and I can't wait to see what lies ahead of me!
-
-#ANDROID_DEVELOPMENT
-
+Describe any challenges encountered while building the app. <!-- Replace this with your specific challenges and experiences -->
 
 ## License
 

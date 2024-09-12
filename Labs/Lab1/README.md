@@ -2,7 +2,7 @@
 
 Course Link: [CodePath Android Course](https://courses.codepath.org/courses/and102/unit/1#!labs)
 
-Submitted by: **Your Name Here** <!-- Replace 'Your Name Here' with your actual name -->
+Submitted by: **Tsewang Sherpa** <!-- Replace 'Your Name Here' with your actual name -->
 
 **Tap Counter App** is an Android app inspired by idle tap games, allowing users to accumulate points through taps, which can be exchanged for upgrades.
 
@@ -13,22 +13,16 @@ Time spent: **X** hours spent in total <!-- Replace 'X' with the number of hours
 The following **required** functionality is completed:
 
 - [X] **User can see a number displayed on the screen. The number starts at 0.**
-    - ![Image/GIF showing the initial display of the number](http://i.imgur.com/link/to/your/gif/file.gif) <!-- Replace this link with your actual image/GIF link -->
-
 - [X] **User can tap on a button to see the number displayed increase by 1.**
-    - ![Image/GIF showing the number increase on button tap](http://i.imgur.com/link/to/your/gif/file.gif) <!-- Replace this link with your actual image/GIF link -->
+    - <img src='./First.gif' title='GIF Walkthrough' width='' alt='GIF Walkthrough' />
 
 ## Stretch Features
 
 The following **optional** features are implemented:
 
 - [X] User can exchange number of taps accumulated for upgrades (e.g., each tap counts as 2 taps).
-    - ![Image/GIF showing the upgrade process](http://i.imgur.com/link/to/your/gif/file.gif) <!-- Replace this link with your actual image/GIF link -->
-
 - [X] User can customize the app's theme (e.g., using a dog background and a paw print button).
-    - ![Image/GIF showing theme customization](http://i.imgur.com/link/to/your/gif/file.gif) <!-- Replace this link with your actual image/GIF link -->
-
-
+    <img src='./Upgrade.gif' title='GIF Walkthrough' width='' alt='GIF Walkthrough' />
 
 ## Notes
 

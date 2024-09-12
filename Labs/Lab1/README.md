@@ -21,12 +21,12 @@ The following **required** functionality is completed:
 The following **optional** features are implemented:
 
 - [X] User can exchange number of taps accumulated for upgrades (e.g., each tap counts as 2 taps).
-- [X] User can customize the app's theme (e.g., using a dog background and a paw print button).
-    <img src='./Upgrade.gif' title='GIF Walkthrough' width='' alt='GIF Walkthrough' />
+- [X] User can customize the app's theme (e.g., using a dog background and a paw print button). 
+   - <img src='./Upgrade.gif' title='GIF Walkthrough' width='' alt='GIF Walkthrough' />
 
 ## Notes
 
-Describe any challenges encountered while building the app. <!-- Replace this with your specific challenges and experiences -->
+It was challenging to figure out the background image for button, when using Button Tag, only image's outline was showing with purple background color. However, ImageButton Tag fixed the issue and I was able to display Mountain pic as button. <!-- Replace this with your specific challenges and experiences -->
 
 ## License
 

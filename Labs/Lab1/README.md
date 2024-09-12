@@ -14,6 +14,7 @@ The following **required** functionality is completed:
 
 - [X] **User can see a number displayed on the screen. The number starts at 0.**
 - [X] **User can tap on a button to see the number displayed increase by 1.**
+      
     - <img src='./First.gif' title='GIF Walkthrough' width='' alt='GIF Walkthrough' />
 
 ## Stretch Features
@@ -21,7 +22,8 @@ The following **required** functionality is completed:
 The following **optional** features are implemented:
 
 - [X] User can exchange number of taps accumulated for upgrades (e.g., each tap counts as 2 taps).
-- [X] User can customize the app's theme (e.g., using a dog background and a paw print button). 
+- [X] User can customize the app's theme (e.g., using a dog background and a paw print button).
+      
    - <img src='./Upgrade.gif' title='GIF Walkthrough' width='' alt='GIF Walkthrough' />
 
 ## Notes

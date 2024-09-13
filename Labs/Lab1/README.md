@@ -16,7 +16,7 @@ The following **required** functionality is completed:
  
 - [X] **Increment the number by 1 each time the user taps a button.**
  
-    - <img src='./First.gif' title='GIF Walkthrough' alt='GIF Walkthrough' />
+    - <img src='./First.gif' title='GIF Walkthrough' height="500" alt='GIF Walkthrough' />
 
 ## Stretch Features
 
@@ -27,7 +27,7 @@ The following **optional** features are implemented:
   - 100 taps for an upgrade that makes each tap count as 2 taps.
     - <img src='./Upgrade.gif' title='GIF Upgrade' height="500" alt='GIF Walkthrough' />
   - 100 taps for a custom icon button.
-    - <img src="./IconChange.gif" title="Icon Change" alt="GIF walkthrough" />
+    - <img src="./IconChange.gif" title="Icon Change" height="500"  alt="GIF walkthrough" />
     
 - [X] User has progressively difficult goals to reach in terms of number of taps accumulated.
   - <img src="./Difficulty.gif" title="GIF Difficult Goal" height="500" alt="GIF walkthrough" />

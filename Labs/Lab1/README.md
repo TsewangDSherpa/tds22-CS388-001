@@ -25,14 +25,16 @@ The following **optional** features are implemented:
 - [X] User can customize the app's theme (e.g., using a dog background and a paw print button).
 - [X] Allow users to exchange accumulated taps for upgrades, such as:
   - 100 taps for an upgrade that makes each tap count as 2 taps.
-    - <img src='./Upgrade.gif' title='GIF Upgrade' width='' alt='GIF Walkthrough' />
+    - <img src='./Upgrade.gif' title='GIF Upgrade' height="200" alt='GIF Walkthrough' />
   - 100 taps for a custom icon button.
     - <img src="./IconChange.gif" title="Icon Change" alt="GIF walkthrough" />
-  
+    
 - [X] User has progressively difficult goals to reach in terms of number of taps accumulated.
-  - <img src="./Difficulty.gif" title="GIF Difficult Goal" height="400" alt="GIF walkthrough" />
-- [X] (Extra challenge) Implement increasingly difficult goals for the user to reach with accumulated taps, display each goal on the screen, and track the total number of goals reached.
-  - <img src="./GoalSteps.gif" title="GIF GoalStep" height="400" GIF walkthrough" />
+  - <img src="./Difficulty.gif" title="GIF Difficult Goal" height="200" alt="GIF walkthrough" />
+  
+- [X] (Extra challenge) Implement increasingly difficult goals for the user to reach with accumulated taps, display each goal on the screen, and track the total number of 
+      goals reached.
+  - <img src="./GoalSteps.gif"   title="GIF GoalStep" height="400" alt= "GIF walkthrough"  />
 
 ## Notes
 

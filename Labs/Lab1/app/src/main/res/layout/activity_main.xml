@@ -80,9 +80,9 @@
 
     <TextView
         android:id="@+id/goalText"
-        android:layout_width="202dp"
-        android:layout_height="38dp"
-        android:text="Goal : 100 Steps"
+        android:layout_width="306dp"
+        android:layout_height="74dp"
+        android:text="Goal : 100 Steps \n Reached : 0 Goals"
         android:textAlignment="center"
         android:textColor="#D9D9D9"
         android:textSize="20sp"
@@ -90,5 +90,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/upgradeBtn"
-        app:layout_constraintVertical_bias="0.395" />
+        app:layout_constraintVertical_bias="0.397" />
 </androidx.constraintlayout.widget.ConstraintLayout>

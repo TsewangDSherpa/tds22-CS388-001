@@ -10,6 +10,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import kotlin.math.ceil
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
@@ -27,6 +28,8 @@ class MainActivity : AppCompatActivity() {
         val upgradebutton = findViewById<Button>(R.id.upgradeBtn)
         val button = findViewById<ImageButton>(R.id.button)
         val textView3 = findViewById<TextView>(R.id.textView3)
+        val goalTextView = findViewById<TextView>(R.id.goalText)
+        var goal: Int = 100
         button.setOnClickListener {
             //            Toast.makeText(it.context, "Clicked Button! $counter", Toast.LENGTH_SHORT).show()
             val randomStep = Random.nextInt(1, 5)
@@ -36,16 +39,34 @@ class MainActivity : AppCompatActivity() {
 
             countText.text = counter.toString()
 
-            if (counter >= 100) {
+
+            if (counter >= goal) {
                 upgradebutton.text = "Take the Upgrade!"
                 upgradebutton.visibility = View.VISIBLE
-
+                goal += ceil(goal * 0.5).toInt()
+                goalTextView.text = "Goal : $goal Steps"
                 upgradebutton.setOnClickListener {
+                    button.background = getDrawable(R.drawable.start)
                     button.setOnClickListener {
                         val randomStep = Random.nextInt(1, 15)
                         counter += randomStep
                         textView3.text = "You took $randomStep steps!"
                         countText.text = counter.toString()
+                        if (counter >= goal) {
+                            goal += ceil(goal * 0.5).toInt()
+                            goalTextView.text = "Goal : $goal Steps"
+                        }
+                        if ( counter % 11 == 0 || counter % 7 == 0 ) {
+                            var slippedSteps = Random.nextInt(3,15)
+                            counter -= slippedSteps
+                            if (counter < 0) {
+                                slippedSteps = slippedSteps + counter
+                                counter = 0
+                            }
+                            Toast.makeText(this, "You slipped $slippedSteps steps!", Toast.LENGTH_SHORT).show()
+                            countText.text = counter.toString()
+                        }
+
                     }
                     Toast.makeText(this, "You just Upgraded!\n \tWhoo!", Toast.LENGTH_LONG).show()
 
@@ -53,13 +74,14 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
+
+
             if ( counter % 11 == 0 || counter % 7 == 0 ) {
-                var slippedSteps = Random.nextInt(20)
+                var slippedSteps = Random.nextInt(3,15)
                 counter -= slippedSteps
                 if (counter < 0) {
                     slippedSteps = slippedSteps + counter
                     counter = 0
-
                 }
                 Toast.makeText(this, "You slipped $slippedSteps steps!", Toast.LENGTH_SHORT).show()
                 countText.text = counter.toString()

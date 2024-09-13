@@ -12,9 +12,9 @@ Time spent: **1** hours spent in total <!-- Replace 'X' with the number of hours
 
 The following **required** functionality is completed:
 
-- [X] **User can see a number displayed on the screen. The number starts at 0.**
+- [X] **Display a number on the screen starting from 0.**
  
-- [X] **User can tap on a button to see the number displayed increase by 1.**
+- [X] **Increment the number by 1 each time the user taps a button.**
  
     - <img src='./First.gif' title='GIF Walkthrough' alt='GIF Walkthrough' />
 
@@ -22,15 +22,18 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 
-- [X] User can exchange number of taps accumulated for upgrades (e.g., each tap counts as 2 taps).
-  - <img src='./Upgrade.gif' title='GIF Walkthrough' width='' alt='GIF Walkthrough' />
-
 - [X] User can customize the app's theme (e.g., using a dog background and a paw print button).
- 
+- [X] Allow users to exchange accumulated taps for upgrades, such as:
+  - 100 taps for an upgrade that makes each tap count as 2 taps.
+    - <img src='./Upgrade.gif' title='GIF Walkthrough' width='' alt='GIF Walkthrough' />
+  - 100 taps for a custom icon button.
+    - <img src="./IconChange.gif" title="Icon Change Difficult Goal" alt="GIF walkthrough" />
+  
 - [X] User has progressively difficult goals to reach in terms of number of taps accumulated.
   - <img src="./Difficulty.gif" title="GIF Difficult Goal" alt="GIF walkthrough" />
-     
- 
+- [X] (Extra challenge) Implement increasingly difficult goals for the user to reach with accumulated taps, display each goal on the screen, and track the total number of goals reached.
+  - <img src="./GoalSteps.gif" title="GIF Difficult Goal" height="600" GIF walkthrough" />
+
 ## Notes
 
 It was challenging to figure out the background image for button, when using Button Tag, only image's outline was showing with purple background color. However, ImageButton Tag fixed the issue and I was able to display Mountain pic as button. <!-- Replace this with your specific challenges and experiences -->

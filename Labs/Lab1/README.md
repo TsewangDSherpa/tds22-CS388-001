@@ -13,19 +13,24 @@ Time spent: **1** hours spent in total <!-- Replace 'X' with the number of hours
 The following **required** functionality is completed:
 
 - [X] **User can see a number displayed on the screen. The number starts at 0.**
+ 
 - [X] **User can tap on a button to see the number displayed increase by 1.**
-      
-    - <img src='./First.gif' title='GIF Walkthrough' width='' alt='GIF Walkthrough' />
+ 
+    - <img src='./First.gif' title='GIF Walkthrough' alt='GIF Walkthrough' />
 
 ## Stretch Features
 
 The following **optional** features are implemented:
 
 - [X] User can exchange number of taps accumulated for upgrades (e.g., each tap counts as 2 taps).
-- [X] User can customize the app's theme (e.g., using a dog background and a paw print button).
-      
-   - <img src='./Upgrade.gif' title='GIF Walkthrough' width='' alt='GIF Walkthrough' />
+  - <img src='./Upgrade.gif' title='GIF Walkthrough' width='' alt='GIF Walkthrough' />
 
+- [X] User can customize the app's theme (e.g., using a dog background and a paw print button).
+ 
+- [X] User has progressively difficult goals to reach in terms of number of taps accumulated.
+  - <img src="./Difficulty.gif" title="GIF Difficult Goal" alt="GIF walkthrough" />
+     
+ 
 ## Notes
 
 It was challenging to figure out the background image for button, when using Button Tag, only image's outline was showing with purple background color. However, ImageButton Tag fixed the issue and I was able to display Mountain pic as button. <!-- Replace this with your specific challenges and experiences -->
@@ -45,3 +50,4 @@ It was challenging to figure out the background image for button, when using But
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
+

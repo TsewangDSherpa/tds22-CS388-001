@@ -10,6 +10,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,30 +26,45 @@ class MainActivity : AppCompatActivity() {
         var counter = 0
         val upgradebutton = findViewById<Button>(R.id.upgradeBtn)
         val button = findViewById<ImageButton>(R.id.button)
+        val textView3 = findViewById<TextView>(R.id.textView3)
         button.setOnClickListener {
             //            Toast.makeText(it.context, "Clicked Button! $counter", Toast.LENGTH_SHORT).show()
-            counter++
+            val randomStep = Random.nextInt(1, 5)
+            counter+= randomStep
+
+            textView3.text = "You took $randomStep steps!"
+
             countText.text = counter.toString()
 
             if (counter >= 100) {
+                upgradebutton.text = "Take the Upgrade!"
                 upgradebutton.visibility = View.VISIBLE
 
                 upgradebutton.setOnClickListener {
-//                    button.text = "Add 2"
                     button.setOnClickListener {
-                        counter += 2
+                        val randomStep = Random.nextInt(1, 15)
+                        counter += randomStep
+                        textView3.text = "You took $randomStep steps!"
                         countText.text = counter.toString()
                     }
                     Toast.makeText(this, "You just Upgraded!\n \tWhoo!", Toast.LENGTH_LONG).show()
+
                 upgradebutton.visibility = View.INVISIBLE
                 }
             }
 
+            if ( counter % 11 == 0 || counter % 7 == 0 ) {
+                var slippedSteps = Random.nextInt(20)
+                counter -= slippedSteps
+                if (counter < 0) {
+                    slippedSteps = slippedSteps + counter
+                    counter = 0
+
+                }
+                Toast.makeText(this, "You slipped $slippedSteps steps!", Toast.LENGTH_SHORT).show()
+                countText.text = counter.toString()
+            }
 
         }
-
-
-
-
     }
 }

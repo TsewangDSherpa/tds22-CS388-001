@@ -3,4 +3,22 @@
     <string name="enter_4_letter_guess_here">Enter 4 Letter Guess Here</string>
     <string name="guess">GUESS !</string>
     <string name="restart">RESTART</string>
+    <string name="you_have_some_letters_there">You have some letters there</string>
+    <string name="you_have_some_letters_in_right_positions">You have some letters in right positions</string>
+    <string name="try_again">Try Again!</string>
+    <string name="animals">Animals</string>
+    <string name="next_word_from_colors">Next Word From : Colors</string>
+    <string name="objects">Objects</string>
+    <string name="nature">Nature</string>
+    <string name="colors">Colors</string>
+    <string name="foods">Foods</string>
+    <string name="wordle_game">Wordle Game</string>
+    <string name="streaks_0">Streaks: 0</string>
+    <string name="guess_2">GUESS #2</string>
+    <string name="emptyString" />
+    <string name="guess_1">GUESS #1</string>
+    <string name="guess_1_check">GUESS #1 CHECK</string>
+    <string name="guess_2_check">GUESS #2 CHECK</string>
+    <string name="guess_3">GUESS #3</string>
+    <string name="guess_3_check">GUESS #3 CHECK</string>
 </resources>

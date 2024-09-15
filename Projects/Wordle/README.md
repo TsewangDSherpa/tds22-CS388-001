@@ -28,12 +28,11 @@ The following **optional** features are implemented:
 ## GIF Walkthrough
 
 Here's a walkthrough of implemented user stories:
-
+GIF Displays all of the required features along with all of the stretch features.
 <img src='./WordleGIF.gif' title='Video Walkthrough'  alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...
-
+GIF created with 
 [ScreenToGif](https://www.screentogif.com/) for Windows
 
 

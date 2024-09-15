@@ -24,26 +24,22 @@ The following **optional** features are implemented:
 - [X] User will get an error message if they input an invalid guess
 - [X] User can see a 'streak' record of how many words they've guessed correctly.
 
-The following **additional** features are implemented:
 
-* [ ] List anything else that you can get done to improve the app functionality!
-
-## Video Walkthrough
+## GIF Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='./WordleGIF.gif' title='Video Walkthrough'  alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
+
 [ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+
 
 ## Notes
-
-Describe any challenges encountered while building the app.
+I had few issue with the index error, when getting a new word. I fixed that by getting the random index within the wordList.indices. 
+Overall, it was fun project, I got learn a lot about logic, constraints, and creating mobile app. 
 
 ## License
 

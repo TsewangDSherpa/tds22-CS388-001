@@ -32,11 +32,10 @@ The following **stretch** functionality is implemented:
     - Picture of the sender
     - Email sent date
     - Bolded information if the email is unread
-    - ![Image/GIF showing additional email information](http://i.imgur.com/link/to/your/gif/file.gif) <!-- Replace this link with your actual image/GIF link -->
+    - ![Image/GIF showing additional email information](Final.gif) <!-- Replace this link with your actual image/GIF link -->
 
 ## Notes
-
-Describe any challenges encountered while building the app. <!-- Replace this with your specific challenges and experiences -->
+The code and walkthrough was pretty straight forward. Recycler View is really a great tool to put under my belt while developing Android Project. 
 
 ## Resources
 
@@ -46,7 +45,7 @@ Describe any challenges encountered while building the app. <!-- Replace this wi
 ## License
 
 ```plaintext
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2024] [Tsewang Sherpa]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

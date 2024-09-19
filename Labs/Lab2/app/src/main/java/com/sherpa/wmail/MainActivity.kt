@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
             val newEmails = EmailFetcher.getNext5Emails()
             emails.addAll(newEmails)
             // Notify the adapter there's new emails so the RecyclerView layout is updated
-            adapter.notifyDagit statusgit statustaSetChanged()
+            adapter.notifyDataSetChanged()
         }
     }
 }

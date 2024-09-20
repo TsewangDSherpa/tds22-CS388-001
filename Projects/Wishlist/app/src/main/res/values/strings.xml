@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Wishlist</string>
+    <string name="submit">Add To List</string>
+    <string name="name">Product Name</string>
+    <string name="_0_00">$0.00</string>
+    <string name="url_link">Product\'s URL Link</string>
+    <string name="sherpa_s_wishlist">Sherpa\'s Wishlist</string>
+    <string name="custUrl">https://www.amazon.com/Metapen-2018-2024-PreciseSensitivity-13-inch/dp/B09ZTXVNVD/?_encoding=UTF8pd_rd_w=HAEKQcontent-id=amzn1.sym.aeef70de-9e3e-4007-ae27-5dbb7b4a72f6pf_rd_p=aeef70de-9e3e-4007-ae27-5dbb7b4a72f6pf_rd_r=H1YGMQN7W2K78SKHP617pd_rd_wg=lUSuepd_rd_r=b149a058-af6c-4023-9dd6-3d5f773fad40ref_=pd_hp_d_btf_crs_zg_bs_541966</string>
 </resources>

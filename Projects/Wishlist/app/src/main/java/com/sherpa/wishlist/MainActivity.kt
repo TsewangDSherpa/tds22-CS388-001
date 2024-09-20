@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Button
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -40,19 +41,30 @@ class MainActivity : AppCompatActivity() {
             inputManager.hideSoftInputFromWindow(windowToken, 0)
         }
         addButton.setOnClickListener {
-            val name = nameEditText.text.toString()
-            val price = priceEditText.text.toString().toDouble()
-            val url = urlEditText.text.toString()
 
+            try {
+                val name = nameEditText.text.toString()
+                val price = priceEditText.text.toString().toDouble()
+                val url = urlEditText.text.toString()
 
-            if (name.isNotEmpty() && price > 0 && url.isNotEmpty()) {
-                Wishlist.addToWishList(name, price, url)
-                adapter.notifyDataSetChanged()
-                nameEditText.text?.clear()
-                priceEditText.text?.clear()
-                urlEditText.text?.clear()
-                it.hideKeyboard()
+                if (name.isNotEmpty() && price > 0 && url.isNotEmpty()) {
+                    Wishlist.addToWishList(name, price, url)
+                    adapter.notifyItemChanged(adapter.itemCount - 1)
+                    nameEditText.text?.clear()
+                    priceEditText.text?.clear()
+                    urlEditText.text?.clear()
+                    it.hideKeyboard()
+                }
             }
+            catch (e: Exception) {
+                Toast.makeText(this, "Please enter valid input", Toast.LENGTH_SHORT).show()
+                Log.e("MainActivity", e.toString())
+            }
+
+
+
+
+
         }
     }
 }

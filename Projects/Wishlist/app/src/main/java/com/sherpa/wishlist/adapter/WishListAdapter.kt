@@ -1,12 +1,18 @@
 package com.sherpa.wishlist.adapter
 
+import android.content.ActivityNotFoundException
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.sherpa.wishlist.R
 import com.sherpa.wishlist.model.Wishlist
+import java.util.Locale
 
 class WishListAdapter(private val wishList: ArrayList<Wishlist>) : RecyclerView.Adapter<WishListAdapter.ViewHolder>() {
 
@@ -36,9 +42,26 @@ class WishListAdapter(private val wishList: ArrayList<Wishlist>) : RecyclerView.
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item: Wishlist = wishList[position]
-        holder.nameTextView.text = item.name
+        holder.nameTextView.text = item.name.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
         val price = "$%.2f".format(item.price)
         holder.priceTextView.text = price
         holder.urlTextView.text = item.url
+        holder.itemView.setOnLongClickListener {
+            wishList.removeAt(holder.adapterPosition)
+            notifyItemRemoved(holder.adapterPosition)
+            true
+        }
+
+        holder.urlTextView.setOnClickListener {
+            try {
+                val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(item.url))
+                ContextCompat.startActivity(it.context, browserIntent, null)
+            } catch (e: ActivityNotFoundException) {
+                Toast.makeText(it.context, "Invalid URL for " + item.name, Toast.LENGTH_LONG).show()
+            }
+        }
+
+
+
     }
 }

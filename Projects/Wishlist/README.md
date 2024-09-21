@@ -32,7 +32,7 @@ User can also delete an item by long pressing on the item, and be able to go to 
 Left Image showcases regular user input, while Right Image simulates adding a lot of items to display the RecyclerView's usage.
 
 <p align="center">
-    <img src='./WishListGIF.gif' title='Video Walkthrough' width='300' alt='General Walkthrough' style="margin-right: 10px;" />
+    <img src='./WishListGIF.gif' title='Video Walkthrough' width='300' alt='General Walkthrough' style="margin-right: 30px; " />
     <img src='./AddingMore.gif' title='Another Walkthrough' width='300' alt='Another Walkthrough' />
 </p>
 

@@ -1,0 +1,25 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable profileimg
+id dateTv2
+id emailsRv
+id imgView
+id loadMoreBtn
+id main
+id senderTv
+id summaryTv
+id titleTv
+layout activity_main
+layout email_item
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string load_more
+style Base.Theme.Wmail
+style Theme.Wmail
+xml backup_rules
+xml data_extraction_rules

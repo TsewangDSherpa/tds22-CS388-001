@@ -22,7 +22,7 @@ import org.json.JSONObject
 // --------------------------------//
 // CHANGE THIS TO BE YOUR API KEY  //
 // --------------------------------//
-private const val API_KEY = "GnoiGyVBCKTqYnNk8SgU1RlCTwcSnIgA"
+//private const val API_KEY = "GnoiGyVBCKTqYnNk8SgU1RlCTwcSnIgA"
 
 /*
  * The class for the only fragment in the app, which contains the progress bar,
@@ -58,7 +58,7 @@ class BestSellerBooksFragment : Fragment(), OnListFragmentInteractionListener {
         // Using the client, perform the HTTP request
         val client = AsyncHttpClient()
         val params = RequestParams()
-        params["api-key"] = API_KEY
+        params["api-key"] = BuildConfig.API_KEY
 
         // Using the client, perform the HTTP request
         client[

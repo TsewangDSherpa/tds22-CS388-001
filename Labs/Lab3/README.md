@@ -27,7 +27,7 @@ The following **stretch** functionality is implemented:
 
 - [X] (4 pts) **Improved layout and styling to match the NY Times website.**
     - Includes a "buy" button that links to Amazon.
-    - <img src='./Lab03GIF.gif.gif' title='GIF Walkthrough' height="500" alt='GIF Walkthrough' />
+    - <img src='./Lab03GIF.gif' title='GIF Walkthrough' height="500" alt='GIF Walkthrough' />
 
 ## Notes
  Thanks to the helpful guide, the process of calling API request and parsing results was pretty easy, and straight forward.<!-- Replace this with your specific challenges and experiences -->

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">NY Times Best Seller</string>
+    <string name="buy_on_amazon">Buy on Amazon</string>
+    <string name="ranking">Ranking</string>
+    <string name="description">Description</string>
+    <string name="author">Author</string>
+    <string name="title">Title</string>
+</resources>

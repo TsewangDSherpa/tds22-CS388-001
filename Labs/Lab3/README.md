@@ -15,7 +15,6 @@ Time spent: **1.5** hours spent in total <!-- Replace 'X' with the number of hou
 The following **required** functionality is completed:
 
 - [X] (2 pts) **Live data is loaded from the NY Times API.**
-    - 
 - [X] (4 pts) **Books are displayed using a RecyclerView.**
     - Displays book ranking, cover, title, author, and description.
     - Book cover images are downloaded using Glide.

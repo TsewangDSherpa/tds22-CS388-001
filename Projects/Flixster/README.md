@@ -30,7 +30,8 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='./FlixsterGIF.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='./FlixsterGIF.gif' title='Video Walkthrough' width='500' alt='Video Walkthrough' />
+<img src='./ScreenCapOfPlaceholderCode.png' title='ScreenCaptureofCode' width='500' alt='code snippet' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  

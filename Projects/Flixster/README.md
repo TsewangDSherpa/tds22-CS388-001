@@ -31,7 +31,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+<div style="display: flex; justify-content: center; align-items: center;">
   <div style="text-align: center;">
     <img src='./FlixsterGIF.gif' title='Video Walkthrough' width='500' alt='Video Walkthrough' />
     <img src='./ScreenCapOfPlaceholderCode.png' title='ScreenCaptureofCode' width='500' alt='code snippet' />

@@ -25,17 +25,21 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 - [X] Clicking the Movie shows more information about which movie is clicked.
+- [X] Used api.properties to hide the API from the source code.  
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='./FlixsterGIF.gif' title='Video Walkthrough' width='500' alt='Video Walkthrough' />
-<img src='./ScreenCapOfPlaceholderCode.png' title='ScreenCaptureofCode' width='500' alt='code snippet' />
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div style="text-align: center;">
+    <img src='./FlixsterGIF.gif' title='Video Walkthrough' width='500' alt='Video Walkthrough' />
+    <img src='./ScreenCapOfPlaceholderCode.png' title='ScreenCaptureofCode' width='500' alt='code snippet' />
+  </div>
+</div>
 
-<!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
-<!-- Recommended tools:
+
 [ScreenToGif](https://www.screentogif.com/) for Windows
 
 
@@ -45,7 +49,7 @@ App was very similar to the Lab Assignment. I got to work with API and making we
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2024] [Tsewang Sherpa]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

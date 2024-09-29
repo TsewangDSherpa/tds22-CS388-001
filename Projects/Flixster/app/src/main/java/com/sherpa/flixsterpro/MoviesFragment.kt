@@ -34,7 +34,7 @@ class MoviesFragment : Fragment(), OnListFragmentInteractionListener {
 
 
         val orientation = resources.configuration.orientation
-        val spanCount = if (orientation == Configuration.ORIENTATION_PORTRAIT) 2 else 4
+        val spanCount = if (orientation == Configuration.ORIENTATION_PORTRAIT) 1 else 2
 
         val layoutManager = GridLayoutManager(context, spanCount)
         recyclerView.layoutManager = layoutManager

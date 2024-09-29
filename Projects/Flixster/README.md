@@ -49,7 +49,7 @@ App was very similar to the Lab Assignment. I got to work with API and making we
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2024] [Tsewang Sherpa]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

@@ -25,17 +25,19 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 - [X] Clicking the Movie shows more information about which movie is clicked.
+- [X] Used api.properties to hide the API from the source code.  
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='./FlixsterGIF.gif' title='Video Walkthrough' width='500' alt='Video Walkthrough' />
-<img src='./ScreenCapOfPlaceholderCode.png' title='ScreenCaptureofCode' width='500' alt='code snippet' />
+<div style="text-align: center;">
+  <img src='./FlixsterGIF.gif' title='Video Walkthrough' width='500' alt='Video Walkthrough' />
+  <img src='./ScreenCapOfPlaceholderCode.png' title='ScreenCaptureofCode' width='500' alt='code snippet' />
+</div>
 
-<!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
-<!-- Recommended tools:
+
 [ScreenToGif](https://www.screentogif.com/) for Windows
 
 

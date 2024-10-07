@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">Wordle</string>
-    <string name="enter_4_letter_guess_here">Enter 4 Letter Guess Here</string>
-    <string name="guess">GUESS !</string>
-    <string name="restart">RESTART</string>
-</resources>

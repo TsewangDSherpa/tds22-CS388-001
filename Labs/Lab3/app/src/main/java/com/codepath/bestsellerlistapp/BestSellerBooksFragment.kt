@@ -87,7 +87,7 @@ class BestSellerBooksFragment : Fragment(), OnListFragmentInteractionListener {
             val arrayBookType = object : TypeToken<List<BestSellerBook>>() {}.type
 
             val models : List<BestSellerBook> = gson.fromJson(booksRawJSON, arrayBookType) // Fix me!
-            recyclerView.adapter = BestSellerBooksRecyclerViewAdapter(models, this@BestSellerBooksFragment)
+            recyclerView.adapter = BestSellerBooksRecyclerViewAdapter(models, this–@BestSellerBooksFragment)
                 // Look for this in Logcat:
                 Log.d("BestSellerBooksFragment", "response successful")
             }

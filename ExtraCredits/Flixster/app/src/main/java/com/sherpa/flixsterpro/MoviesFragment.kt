@@ -13,6 +13,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.codepath.asynchttpclient.AsyncHttpClient
+import com.codepath.asynchttpclient.BuildConfig
+import com.codepath.asynchttpclient.RequestHeaders
 import com.codepath.asynchttpclient.RequestParams
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler
 import com.google.gson.Gson
@@ -50,37 +52,75 @@ class MoviesFragment : Fragment(), OnListFragmentInteractionListener {
 
         // Set up AsyncHttpClient
         val client = AsyncHttpClient()
-        val params = RequestParams()
-        params["api_key"] = BuildConfig.API_KEY
+        val headers = RequestHeaders()
+        headers["x-rapidapi-key"] = com.sherpa.flixsterpro.BuildConfig.API_KEY
 
-        // Make the HTTP request
-        client["https://api.themoviedb.org/3/movie/now_playing", params,
-            object : JsonHttpResponseHandler() {
-                override fun onSuccess(statusCode: Int, headers: Headers, json: JsonHttpResponseHandler.JSON) {
-                    progressBar.hide()
+// Initialize a mutable list to hold jokes
+        val jokesList = mutableListOf<String>()
 
-                    val resultsJSON: JSONArray = json.jsonObject.get("results") as JSONArray
-                    val moviesRawJSON: String = resultsJSON.toString()
-                    val arrayMovieType = object : TypeToken<List<Movie>>() {}.type
+// Track how many requests have completed
+        var completedRequests = 0
 
-                    val models: List<Movie> = Gson().fromJson(moviesRawJSON, arrayMovieType)
-                    recyclerView.adapter = MoviesRecyclerViewAdapter(models, this@MoviesFragment)
-                    Log.d("MoviesFragment", "Response successful")
-                }
+// Make 15 HTTP requests for jokes
+        for (i in 0 until 15) {
+            client.get(
+                "https://jokes-always.p.rapidapi.com/common", headers,
+                null,
+                object : JsonHttpResponseHandler() {
+                    override fun onSuccess(
+                        statusCode: Int,
+                        headers: Headers,
+                        json: JsonHttpResponseHandler.JSON
+                    ) {
+                        progressBar.hide()
 
-                override fun onFailure(statusCode: Int, headers: Headers?, errorResponse: String, t: Throwable?) {
-                    progressBar.hide()
-                    t?.message?.let {
-                        Log.e("MoviesFragment", errorResponse)
+                        // Get the joke from the JSON response
+                        val joke = json.jsonObject.get("data") as String
+
+                        // Add the joke to the list
+                        jokesList.add(joke)
+
+                        // Increment completed requests
+                        completedRequests++
+
+                        // Check if all requests have completed
+                        if (completedRequests == 15) {
+                            // Print the jokes list
+                            Log.v("jokes", jokesList.toString())
+                        }
                     }
-                    // Handle error, maybe show a Snackbar or Toast
-                    Toast.makeText(context, "Failed to load movies", Toast.LENGTH_LONG).show()
-                }
-            }
-        ]
+
+                    override fun onFailure(
+                        statusCode: Int,
+                        headers: Headers?,
+                        errorResponse: String?,
+                        t: Throwable?
+                    ) {
+                        progressBar.hide()
+                        t?.message?.let {
+                            Log.e("API_ERROR", errorResponse ?: "Error response was null")
+                        }
+                        // Show a toast message to indicate failure
+                        Toast.makeText(context, "Failed to load jokes", Toast.LENGTH_LONG).show()
+
+                        // Increment completed requests, even in failure, to ensure the count reaches 15
+                        completedRequests++
+
+                        // Check if all requests have completed
+                        if (completedRequests == 15) {
+                            // Print the jokes list (in case of partial success)
+                            Log.d("jokes", jokesList.toString())
+                        }
+                    }
+                })
+        }
+
+        Log.d("JokesDone", jokesList.toString())
     }
 
-    override fun onItemClick(item: Movie) {
+
+        override fun onItemClick(item: Movie) {
+
         Toast.makeText(context, "Movie: ${item.title}", Toast.LENGTH_LONG).show()
     }
 }

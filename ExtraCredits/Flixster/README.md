@@ -1,4 +1,4 @@
-# Android Project 3 - *FlixsterPro*
+# Android Project 3 - *ExtraCredit*
 
 Submitted by: **Tsewang Sherpa**
 

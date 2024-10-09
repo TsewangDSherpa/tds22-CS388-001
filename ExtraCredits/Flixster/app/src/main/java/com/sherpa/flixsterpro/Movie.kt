@@ -1,35 +1,44 @@
 package com.sherpa.flixsterpro
-import com.google.gson.annotations.SerializedName
 
-/**
- * The Model for storing a single Movie
- *
- * SerializedName tags MUST match the JSON response for the
- * object to correctly parse with the gson library.
- */
+import androidx.annotation.Keep
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 class Movie {
 
-    @JvmField
-    @SerializedName("title")
-    var title: String? = null
+    companion object {
 
-    @JvmField
-    @SerializedName("poster_path")
-    var poster_path: String? = null;
 
-    @JvmField
-    @SerializedName("overview")
-    var overview: String? = null
+        fun createJoke(unifiedJoke: String): Movie {
+            val joke = Movie()
+            val jokeQuestion = unifiedJoke.substringBefore("?").trim() + "?"
+            val jokeAnswer = unifiedJoke.substringAfter("?").trim()
+            joke.jokeQuestion = jokeQuestion
+            joke.jokeAnswer = jokeAnswer
+            joke.jokeLiked = false
+            return joke
+        }
 
-    @JvmField
-    @SerializedName("vote_average")
-    var vote_average: Float? = 0.0f
 
-    @JvmField
-    @SerializedName("release_date")
-    var release_date: String? = null
-
-    fun getFullPosterUrl(): String? {
-        return poster_path?.let { "https://image.tmdb.org/t/p/w500/$it" }
     }
+
+    var jokeQuestion: String? = null
+    var jokeAnswer: String? = null
+    var jokeLiked: Boolean = false
+    fun toggleLike() {
+        jokeLiked = !jokeLiked
+    }
+
+
 }
+
+@Keep
+@Serializable
+data class Joke(
+    @SerialName("jokeQuestion")
+    val jokeQuestion: String?,
+    @SerialName("jokeAnswer")
+    val jokeAnswer: String?,
+    @SerialName("jokeLiked")
+    val jokeLiked: Boolean
+) : java.io.Serializable
+

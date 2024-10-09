@@ -4,76 +4,44 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-
-    >
-
-    <ImageView
-        android:id="@+id/movie_image"
-        android:layout_width="168dp"
-        android:layout_height="200dp"
-        android:layout_marginBottom="2dp"
-        android:contentDescription="@string/movieimg"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/movie_details"
-        app:layout_constraintHeight_default="wrap"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintWidth_percent="0.34"
-        app:srcCompat="@drawable/movieplaceholder" />
-
+    android:layout_height="wrap_content">
 
     <LinearLayout
-        android:id="@+id/movie_details"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:id="@+id/joke_details"
+        android:layout_width="306dp"
+        android:layout_height="50dp"
         android:orientation="vertical"
-        app:layout_constraintStart_toEndOf="@+id/movie_image"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintWidth_percent="0.6"
-        android:padding="5dp">
+        app:layout_constraintWidth_percent="0.6">
 
         <TextView
-            android:id="@+id/movie_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/movie_title"
+            android:id="@+id/joke_question"
+            android:layout_width="293dp"
+            android:layout_height="40dp"
+            android:text="Question"
             android:textAlignment="textStart"
             android:textAppearance="?attr/textAppearanceListItem"
-            android:textStyle="bold"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/movie_release_date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/release_date_2022_01_01"
-            android:paddingStart="4dp"
-            android:paddingEnd="4dp"
-            android:textSize="12sp" />
 
-        <TextView
-            android:id="@+id/movie_rating"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/rating_10_10"
-            android:paddingStart="4dp"
-            android:paddingEnd="4dp"
-            android:textSize="12sp" />
-
-        <TextView
-            android:id="@+id/movie_overview"
-            android:layout_width="208dp"
-            android:layout_height="115dp"
-            android:ellipsize="end"
-            android:maxLines="6"
-            android:layout_marginTop="4dp"
-            android:paddingStart="4dp"
-            android:paddingEnd="4dp"
-            android:text="@string/movie_overview"
-            android:textSize="12sp" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/joke_liked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loved"
+        android:textAlignment="textStart"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textColor="@color/colorAccent"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/joke_details"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

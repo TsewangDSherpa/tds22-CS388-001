@@ -8,10 +8,8 @@ import android.text.style.StyleSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 
 
 /**
@@ -35,67 +33,59 @@ class MoviesRecyclerViewAdapter(
      * (Yes, the same ones as in the XML layout files!)
      */
     inner class MovieViewHolder(val mView: View) : RecyclerView.ViewHolder(mView) {
+
         var mItem: Movie? = null
-        val mMovieTitle: TextView = mView.findViewById<View>(id.movie_title) as TextView
-        val mMoviePoster_path: ImageView = mView.findViewById<View>(id.movie_image) as ImageView
-        val mMovie_overview: TextView = mView.findViewById<View>(id.movie_overview) as TextView
-        val mMovie_vote_average: TextView = mView.findViewById<View>(id.movie_rating) as TextView
-        val mMovie_release_date: TextView = mView.findViewById<View>(id.movie_release_date) as TextView
+        val mMovieQuestion: TextView = mView.findViewById<View>(id.joke_question) as TextView
+//        val mMovieAnswer: TextView = mView.findViewById<View>(id.joke_answer) as TextView
+        val mMovieLiked: TextView = mView.findViewById<View>(id.joke_liked) as TextView
 
-        fun bind(movie: Movie) {
 
-            Glide.with(mMoviePoster_path.context)
-                .load("https://image.tmdb.org/t/p/w500/${movie.poster_path}")
-                .placeholder(R.drawable.movieplaceholder)
-                .into(mMoviePoster_path)
-
-        }
+//        fun bind(movie: Movie) {
+//
+//            Glide.with(mMoviePoster_path.context)
+//                .load("https://image.tmdb.org/t/p/w500/${movie.poster_path}")
+//                .placeholder(R.drawable.movieplaceholder)
+//                .into(mMoviePoster_path)
+//
+//        }
 
         override fun toString(): String {
-            return mMovieTitle.toString() + " '" + mMovieTitle.text + "'"
+            return mMovieQuestion.toString() + " '" + mMovieQuestion.text + "'"
         }
+
+
+
     }
 
     /**
      * This lets us "bind" each Views in the ViewHolder to its' actual data!
      */
     override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
+
         val movie = movies[position]
-        holder.bind(movie)
+
         holder.mItem = movie
-        holder.mMovieTitle.text = movie.title
-        holder.mMovie_overview.text = movie.overview
+        holder.mMovieQuestion.text = movie.jokeQuestion
+//        holder.mMovieAnswer.text = movie.jokeAnswer
 
-        val ratingText = buildString {
-            append("Rating: ")
-            append(String.format("%.2f", movie.vote_average))
-            append("/10")
-        }
+        val ratingText =  if (movie.jokeLiked) "Liked" else "Un-Liked"
 
-        val ratingSpannable = SpannableStringBuilder(ratingText).apply {
-            setSpan(StyleSpan(Typeface.BOLD), 0, 7, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
-        }
 
-        holder.mMovie_vote_average.text = ratingSpannable
-
-        val releaseDateText = buildString {
-            append("Release Date: ")
-            append(movie.release_date)
-        }
-
-        val releaseDateSpannable = SpannableStringBuilder(releaseDateText).apply {
-            setSpan(StyleSpan(Typeface.BOLD), 0, 13, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
-        }
-
-        holder.mMovie_release_date.text = releaseDateSpannable
-
+        holder.mMovieLiked.text = ratingText
 
 
         holder.mView.setOnClickListener {
             holder.mItem?.let { book ->
                 mListener?.onItemClick(book)
+                notifyItemChanged(position)
             }
         }
+
+        holder.mMovieLiked.setOnClickListener {
+            movie.toggleLike()
+            holder.mMovieLiked.text = if (movie.jokeLiked) "Liked" else "Un-Liked"
+        }
+
 
 
 

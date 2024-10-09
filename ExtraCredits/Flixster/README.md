@@ -22,7 +22,7 @@ The following **required** functionality is completed:
 - [X] (2 pts) **Click a joke to display it in centered format.**
   - When a joke is clicked, it opens in a centered format on a new screen.
   - ![Image/GIF showing centered joke view](http://i.imgur.com/link/to/your/gif/file.gif) <!-- Replace this link with your actual image/GIF link -->
-- [ ] (2 pts) **Provide social sharing options for at least 2 platforms (e.g., X, Facebook).**
+- [X] (2 pts) **Provide social sharing options for at least 2 platforms (e.g., X, Facebook).**
   - Users can share a joke on selected social media platforms.
   - ![Image/GIF showing social media share feature](http://i.imgur.com/link/to/your/gif/file.gif) <!-- Replace this link with your actual image/GIF link -->
 - [ ] (2 pts) **Customize the theme of the app.**
@@ -33,10 +33,10 @@ The following **required** functionality is completed:
 
 The following **stretch** functionality is implemented:
 
-- [ ] (+3 pts) **Allow users to capture a joke as an image (not a screenshot).**
+- [X] (+3 pts) **Allow users to capture a joke as an image (not a screenshot).**
   - Feature for capturing a single joke as an image.
   - ![Image/GIF showing image capture feature](http://i.imgur.com/link/to/your/gif/file.gif) <!-- Replace this link with your actual image/GIF link -->
-- [ ] (+2 pts) **Enable users to share the captured image on social media.**
+- [X] (+2 pts) **Enable users to share the captured image on social media.**
   - Feature for sharing the captured joke image on social media.
   - ![Image/GIF showing image share feature](http://i.imgur.com/link/to/your/gif/file.gif) <!-- Replace this link with your actual image/GIF link -->
 

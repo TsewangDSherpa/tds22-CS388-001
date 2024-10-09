@@ -1,55 +1,61 @@
-# Android Project 3 - *ExtraCredit*
+# Extra Credit Challenge: Joke Fetching App
 
-Submitted by: **Tsewang Sherpa**
+Course Link: [CodePath Android Course](https://courses.codepath.org/courses/and102/unit/3#!labs)
 
-**FlixsterPro** is a movie browsing app that allows users to browse movies currently playing in theaters.
+Submitted by: **Tsewang Sherpa** <!-- Replace 'Your Name Here' with your actual name -->
 
-Time spent: **1.6** hours spent in total
+**Joke Fetching App** is an app designed to fetch a list of jokes from an external Joke API and allows users to share jokes on social media.
 
-## Required Features
+Time spent: **2.5** hours spent in total <!-- Replace 'X' with the number of hours you spent on this project -->
+
+## Application Features
+
+### Required Features
 
 The following **required** functionality is completed:
 
-- [X] **Make a request to [The Movie Database API's `now_playing`](https://developers.themoviedb.org/3/movies/get-now-playing) endpoint to get a list of current movies**
-- [X] **Parse through JSON data and implement a RecyclerView to display all movies**
-- [X] **Use Glide to load and display movie poster images**
+- [X] (2 pts) **Use rapidapi.com to find a Joke API (use BuildConfig).**
+  - ![Image/GIF showing API integration](http://i.imgur.com/link/to/your/gif/file.gif) <!-- Replace this link with your actual image/GIF link -->
+- [X] (2 pts) **Fetch a list of jokes and display them in a RecyclerView.**
+  - Displays a list of jokes fetched from the API.
+  - ![Image/GIF showing jokes list](http://i.imgur.com/link/to/your/gif/file.gif) <!-- Replace this link with your actual image/GIF link -->
+- [X] (2 pts) **Click a joke to display it in centered format.**
+  - When a joke is clicked, it opens in a centered format on a new screen.
+  - ![Image/GIF showing centered joke view](http://i.imgur.com/link/to/your/gif/file.gif) <!-- Replace this link with your actual image/GIF link -->
+- [ ] (2 pts) **Provide social sharing options for at least 2 platforms (e.g., X, Facebook).**
+  - Users can share a joke on selected social media platforms.
+  - ![Image/GIF showing social media share feature](http://i.imgur.com/link/to/your/gif/file.gif) <!-- Replace this link with your actual image/GIF link -->
+- [ ] (2 pts) **Customize the theme of the app.**
+  - Custom theme applied to the app instead of the default Android theme.
+  - ![Image/GIF showing app theme customization](http://i.imgur.com/link/to/your/gif/file.gif) <!-- Replace this link with your actual image/GIF link -->
 
-The following **optional** features are implemented:
+### Stretch Features
 
-- [X] Improve and customize the user interface through styling and coloring
-- [X] Implement orientation responsivity
-  - App should neatly arrange data in both landscape and portrait mode
-- [X] Implement Glide to display placeholder graphics during loading
-  - Note: this feature is difficult to capture in a GIF without throttling internet speeds.  Instead, include an additional screencap of your Glide code implementing the feature.  (<10 lines of code)
+The following **stretch** functionality is implemented:
 
-The following **additional** features are implemented:
-
-- [X] Clicking the Movie shows more information about which movie is clicked.
-- [X] Used api.properties to hide the API from the source code.  
-
-## Video Walkthrough
-
-Here's a walkthrough of implemented user stories:
-
-<div style="display: flex; justify-content: center; align-items: center;">
-  <div style="text-align: center;">
-    <img src='./FlixsterGIF.gif' title='Video Walkthrough' width='500' alt='Video Walkthrough' />
-    <img src='./ScreenCapOfPlaceholderCode.png' title='ScreenCaptureofCode' width='500' alt='code snippet' />
-  </div>
-</div>
-
-GIF created with ...  
-
-[ScreenToGif](https://www.screentogif.com/) for Windows
-
+- [ ] (+3 pts) **Allow users to capture a joke as an image (not a screenshot).**
+  - Feature for capturing a single joke as an image.
+  - ![Image/GIF showing image capture feature](http://i.imgur.com/link/to/your/gif/file.gif) <!-- Replace this link with your actual image/GIF link -->
+- [ ] (+2 pts) **Enable users to share the captured image on social media.**
+  - Feature for sharing the captured joke image on social media.
+  - ![Image/GIF showing image share feature](http://i.imgur.com/link/to/your/gif/file.gif) <!-- Replace this link with your actual image/GIF link -->
 
 ## Notes
 
-App was very similar to the Lab Assignment. I got to work with API and making web request, displaying them in a nicely manner. 
+Describe any challenges encountered while building the app. <!-- Replace this with your specific challenges and experiences -->
+
+## Resources
+
+- [CodePath's AsyncHTTPClient library](https://guides.codepath.org/android/Using-CodePath-Async-Http-Client)
+- [Displaying Images with Glide library](https://guides.codepath.org/android/Displaying-Images-with-the-Glide-Library)
+- [Parsing JSON responses to Models](https://guides.codepath.org/android/converting-json-to-models)
+- [Parsing JSON with gson library](https://guides.codepath.org/android/Leveraging-the-Gson-Library#parsing-the-response)
+- [Kotlin's Guide on Serialization](https://kotlinlang.org/docs/serialization.html)
 
 ## License
 
-    Copyright [2024] [Tsewang Sherpa]
+```plaintext
+    Copyright [yyyy] [Your Name]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

@@ -11,7 +11,7 @@ import com.sherpa.jokepro.R.id
 
 /**
  * The MainActivity for the BestSellerList app.
- * Launches a [MoviesFragment].
+ * Launches a [JokesFragment].
  */
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,6 +19,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val supportFragmentManager = supportFragmentManager
         val fragmentTransaction = supportFragmentManager.beginTransaction()
-        fragmentTransaction.replace(id.content, MoviesFragment(), null).commit()
+        fragmentTransaction.replace(id.content, JokesFragment(), null).commit()
     }
 }

@@ -1,31 +1,26 @@
 package com.sherpa.jokepro
 
 import com.sherpa.jokepro.R.id
-import android.graphics.Typeface
-import android.text.Spannable
-import android.text.SpannableStringBuilder
-import android.text.style.StyleSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.sherpa.jokepro.R
 
 
 /**
- * [RecyclerView.Adapter] that can display a [Movie] and makes a call to the
+ * [RecyclerView.Adapter] that can display a [Joke] and makes a call to the
  * specified [OnListFragmentInteractionListener].
  */
-class MoviesRecyclerViewAdapter(
-    private val movies: List<Movie>,
+class JokesRecyclerViewAdapter(
+    private val jokes: List<Joke>,
     private val mListener: OnListFragmentInteractionListener?
     )
-    : RecyclerView.Adapter<MoviesRecyclerViewAdapter.MovieViewHolder>()
+    : RecyclerView.Adapter<JokesRecyclerViewAdapter.MovieViewHolder>()
     {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.fragment_movie, parent, false)
+            .inflate(R.layout.fragment_joke, parent, false)
         return MovieViewHolder(view)
     }
 
@@ -35,7 +30,7 @@ class MoviesRecyclerViewAdapter(
      */
     inner class MovieViewHolder(val mView: View) : RecyclerView.ViewHolder(mView) {
 
-        var mItem: Movie? = null
+        var mItem: Joke? = null
         val mMovieQuestion: TextView = mView.findViewById<View>(id.joke_question) as TextView
 //        val mMovieAnswer: TextView = mView.findViewById<View>(id.joke_answer) as TextView
         val mMovieLiked: TextView = mView.findViewById<View>(id.joke_liked) as TextView
@@ -63,7 +58,7 @@ class MoviesRecyclerViewAdapter(
      */
     override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
 
-        val movie = movies[position]
+        val movie = jokes[position]
 
         holder.mItem = movie
         holder.mMovieQuestion.text = movie.jokeQuestion
@@ -96,6 +91,6 @@ class MoviesRecyclerViewAdapter(
      * Remember: RecyclerView adapters require a getItemCount() method.
      */
     override fun getItemCount(): Int {
-        return movies.size
+        return jokes.size
     }
 }

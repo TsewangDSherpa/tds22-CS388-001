@@ -1,6 +1,6 @@
-package com.sherpa.flixsterpro
+package com.sherpa.jokepro
 
-import com.sherpa.flixsterpro.R.id
+import com.sherpa.jokepro.R.id
 import android.graphics.Typeface
 import android.text.Spannable
 import android.text.SpannableStringBuilder
@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.sherpa.jokepro.R
 
 
 /**

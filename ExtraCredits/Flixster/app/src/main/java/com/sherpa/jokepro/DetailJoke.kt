@@ -1,12 +1,10 @@
-package com.sherpa.flixsterpro
+package com.sherpa.jokepro
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
-
-
-
+import com.sherpa.jokepro.R
 
 class DetailJoke : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

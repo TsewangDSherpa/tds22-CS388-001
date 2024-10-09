@@ -1,4 +1,4 @@
-package com.sherpa.flixsterpro
+package com.sherpa.jokepro
 
 import androidx.annotation.Keep
 import kotlinx.serialization.SerialName

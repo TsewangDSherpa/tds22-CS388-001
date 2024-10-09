@@ -1,4 +1,4 @@
-package com.sherpa.flixsterpro
+package com.sherpa.jokepro
 
 import android.content.Intent
 import android.content.res.Configuration
@@ -15,10 +15,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.codepath.asynchttpclient.AsyncHttpClient
 import com.codepath.asynchttpclient.RequestHeaders
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler
+import com.sherpa.jokepro.R
 import okhttp3.Headers
 
 
-class MoviesFragment : Fragment(), OnListFragmentInteractionListener  {
+class MoviesFragment : Fragment(), OnListFragmentInteractionListener {
     private val jokesList = mutableListOf<Movie>()
     private val totalRequests = 15 // Easily modifiable request count
 
@@ -43,7 +44,7 @@ class MoviesFragment : Fragment(), OnListFragmentInteractionListener  {
         progressBar.show()
         val client = AsyncHttpClient()
         val headers = RequestHeaders().apply {
-            this["x-rapidapi-key"] = com.sherpa.flixsterpro.BuildConfig.API_KEY
+            this["x-rapidapi-key"] = BuildConfig.API_KEY
         }
 
         var completedRequests = 0

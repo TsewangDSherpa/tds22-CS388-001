@@ -1,4 +1,4 @@
-package com.sherpa.flixsterpro
+package com.sherpa.jokepro
 
 import org.junit.Test
 

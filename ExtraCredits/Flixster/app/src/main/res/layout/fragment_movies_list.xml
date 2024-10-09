@@ -15,7 +15,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         app:layoutManager="LinearLayoutManager"
-        tools:context=".MoviesFragment"
+        tools:context="com.sherpa.jokepro.MoviesFragment"
         tools:listitem="@layout/fragment_movie" />
 
     <androidx.core.widget.ContentLoadingProgressBar

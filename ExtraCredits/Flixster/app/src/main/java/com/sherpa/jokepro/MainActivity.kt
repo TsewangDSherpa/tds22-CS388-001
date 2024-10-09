@@ -1,10 +1,11 @@
-package com.sherpa.flixsterpro
+package com.sherpa.jokepro
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
 
-import com.sherpa.flixsterpro.R.id
+
+import com.sherpa.jokepro.R.id
 
 
 

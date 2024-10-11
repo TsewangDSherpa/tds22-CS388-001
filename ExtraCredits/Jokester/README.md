@@ -18,7 +18,7 @@ The following **required** functionality is completed:
   - ![Image/GIF showing API integration](./RapidAPI.gif) <!-- Replace this link with your actual image/GIF link -->
 - [X] (2 pts) **Fetch a list of jokes and display them in a RecyclerView.**
   - Displays a list of jokes fetched from the API.
-  - ![Image/GIF showing jokes list](./RapidAPI.gif) <!-- Replace this link with your actual image/GIF link -->
+  - ![Image/GIF showing jokes list](./LikeUnlikePic.gif) <!-- Replace this link with your actual image/GIF link -->
 - [X] (2 pts) **Click a joke to display it in centered format.**
   - When a joke is clicked, it opens in a centered format on a new screen.
   - ![Image/GIF showing centered joke view](./DetailJoke.gif) <!-- Replace this link with your actual image/GIF link -->

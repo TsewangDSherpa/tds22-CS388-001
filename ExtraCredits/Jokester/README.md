@@ -14,23 +14,23 @@ Time spent: **2.5** hours spent in total <!-- Replace 'X' with the number of hou
 
 The following **required** functionality is completed:
 - [X] (2 pts) **Use rapidapi.com to find a Joke API (use BuildConfig).**
-  - <img src="./RapidAPI.gif" width="300" height="200" alt="API integration">
+  - <img src="./RapidAPI.gif" width="300"  alt="API integration">
 
 - [X] (2 pts) **Fetch a list of jokes and display them in a RecyclerView.**
   - Displays a list of jokes fetched from the API.
-  - <img src="./LikeUnlikePic.gif" width="300" height="200" alt="Jokes list">
+  - <img src="./LikeUnlikePic.gif" width="300"  alt="Jokes list">
 
 - [X] (2 pts) **Click a joke to display it in centered format.**
   - When a joke is clicked, it opens in a centered format on a new screen.
-  - <img src="./DetailJoke.gif" width="300" height="200" alt="Centered joke view">
+  - <img src="./DetailJoke.gif" width="300" alt="Centered joke view">
 
 - [X] (2 pts) **Provide social sharing options for at least 2 platforms (e.g., X, Facebook).**
   - Users can share a joke on selected social media platforms.
-  - <img src="./sharingImg.gif" width="300" height="200" alt="Social media share feature">
+  - <img src="./sharingImg.gif" width="300" alt="Social media share feature">
 
 - [ ] (2 pts) **Customize the theme of the app.**
   - Custom theme applied to the app instead of the default Android theme.
-  - <img src="./sharingImg.gif" width="300" height="200" alt="App theme customization">
+  - <img src="./sharingImg.gif" width="300"  alt="App theme customization">
 
 ### Stretch Features
 
@@ -38,11 +38,11 @@ The following **stretch** functionality is implemented:
 
 - [X] (+3 pts) **Allow users to capture a joke as an image (not a screenshot).**
   - Feature for capturing a single joke as an image.
-  - <img src="./sharingPicImage.gif" width="300" height="200" alt="Image capture feature">
+  - <img src="./sharingPicImage.gif" width="300"  alt="Image capture feature">
 
 - [X] (+2 pts) **Enable users to share the captured image on social media.**
   - Feature for sharing the captured joke image on social media.
-  - <img src="./sharingPicImage.gif" width="300" height="200" alt="Image share feature">
+  - <img src="./sharingPicImage.gif" width="300"  alt="Image share feature">
 
 ## Notes
 

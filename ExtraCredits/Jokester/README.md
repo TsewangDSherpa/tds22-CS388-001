@@ -45,6 +45,7 @@ The following **stretch** functionality is implemented:
   - <img src="./sharingPicImage.gif" width="300"  alt="Image share feature">
 
 ## Notes
+The joke api only gave one joke as free tier, so I called the api 21 times to get 21 different jokes. For other api, it needed my payment detials so I simply made use of free joke api from rapidapi.com
 The share button work such that you can share the joke as text, and for image, it can be saved as image. You would need to be logged into the social platform to be able to share image on feed. 
 
 ## Resources

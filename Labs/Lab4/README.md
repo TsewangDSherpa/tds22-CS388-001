@@ -15,20 +15,20 @@ Time spent: **1.4** hours spent in total <!-- Replace 'X' with the number of hou
 The following **required** functionality is completed:
 
 - [X] (3 pts) **Articles are displayed using the RecyclerView.**
-  - ![Image/GIF showing RecyclerView implementation](RecyclerViewDemo.gif) <!-- Replace this link with your actual image/GIF link -->
+  - ![Image/GIF showing RecyclerView implementation](./RecyclerViewDemo.gif) <!-- Replace this link with your actual image/GIF link -->
 
 - [X] (4 pts) **Can navigate to the Article Details screen.**
-  - ![Image/GIF showing Article Details screen](DetailPageDemo.gif) <!-- Replace this link with your actual image/GIF link -->
+  - ![Image/GIF showing Article Details screen](./DetailPageDemo.gif) <!-- Replace this link with your actual image/GIF link -->
 
 - [X] (3 pts) **Article images are downloaded and displayed using Glide.**
-  - ![Image/GIF showing Glide usage](CustomizedDemo.gif) <!-- Replace this link with your actual image/GIF link -->
+  - ![Image/GIF showing Glide usage](./CustomizedDemo.gif) <!-- Replace this link with your actual image/GIF link -->
 
 ### Stretch Features
 
 The following **stretch** functionality is implemented:
 
 - [X] (+2 pts bonus) **Enhanced the UI for the application with customized fonts and ConstraintLayout for each of the screens.**
-  - ![Image/GIF showing custom UI styling](CustomizedDemo.gif) <!-- Replace this link with your actual image/GIF link -->
+  - ![Image/GIF showing custom UI styling](./CustomizedDemo.gif) <!-- Replace this link with your actual image/GIF link -->
 
 ## Notes
 The project was very well organized so following the instruction to create this application was pretty easy. 

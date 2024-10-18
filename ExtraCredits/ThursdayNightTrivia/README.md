@@ -40,7 +40,7 @@ The following **required** functionality is completed:
 - [X] (+2 pts) **Add animations between questions for a smoother experience.**
   - Transitions between questions include animations for a better user experience. 
   - Added Colors to show if answer is right or wrong.
-  - ![Image/GIF showing animations](./AnimationGreen.gif) <!-- Replace this link with your actual image/GIF link --
+  - ![Image/GIF showing animations](./AnimationGreen.gif)
 
 ## Resources
 

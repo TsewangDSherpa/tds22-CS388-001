@@ -16,7 +16,7 @@ The following **required** functionality is completed:
 
 - [X] (2 pts) **Create a JSON file with at least 25 trivia questions.**
     - The JSON file contains trivia questions with 4 possible answers and a correct answer.
-    - ![Image/GIF showing JSON structure](./Answers.gif) <!-- Replace this link with your actual image/GIF link -->
+    - ![Image/GIF showing JSON structure](./JSONSC.png) <!-- Replace this link with your actual image/GIF link -->
 
 - [X] (2 pts) **Create a Welcome Activity with trivia info and start button.**
     - The Welcome Activity provides trivia details and a start button to begin the quiz.

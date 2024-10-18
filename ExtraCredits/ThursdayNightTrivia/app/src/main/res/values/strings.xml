@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ThursdayNightTrivia</string>
+    <string name="paris">Paris</string>
+    <string name="london">London</string>
+    <string name="berlin">Berlin</string>
+    <string name="rome">Rome</string>
+    <string name="what_is_the_capital_of_france">What is the capital of France?</string>
+    <string name="background_image">Background Image</string>
+</resources>

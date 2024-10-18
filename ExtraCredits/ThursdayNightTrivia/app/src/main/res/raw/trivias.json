@@ -1,0 +1,227 @@
+[
+  {
+    "question": "Which planet is known as the Red Planet?",
+    "answers": ["Earth", "Mars", "Jupiter", "Venus"],
+    "correctAnswer": "Mars"
+  },
+  {
+    "question": "What is the capital of France?",
+    "answers": ["Paris", "Berlin", "Rome", "Madrid"],
+    "correctAnswer": "Paris"
+  },
+  {
+    "question": "What is the largest ocean on Earth?",
+    "answers": ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
+    "correctAnswer": "Pacific Ocean"
+  },
+  {
+    "question": "Who wrote 'Romeo and Juliet'?",
+    "answers": ["Charles Dickens", "Jane Austen", "William Shakespeare", "Mark Twain"],
+    "correctAnswer": "William Shakespeare"
+  },
+  {
+    "question": "What is the chemical symbol for gold?",
+    "answers": ["Au", "Ag", "Pb", "Fe"],
+    "correctAnswer": "Au"
+  },
+  {
+    "question": "Which element has the atomic number 1?",
+    "answers": ["Oxygen", "Helium", "Hydrogen", "Carbon"],
+    "correctAnswer": "Hydrogen"
+  },
+  {
+    "question": "What is the main language spoken in Brazil?",
+    "answers": ["Spanish", "Portuguese", "English", "French"],
+    "correctAnswer": "Portuguese"
+  },
+  {
+    "question": "Which gas do plants absorb from the atmosphere?",
+    "answers": ["Oxygen", "Nitrogen", "Carbon Dioxide", "Helium"],
+    "correctAnswer": "Carbon Dioxide"
+  },
+  {
+    "question": "In which year did the Titanic sink?",
+    "answers": ["1912", "1905", "1920", "1898"],
+    "correctAnswer": "1912"
+  },
+  {
+    "question": "What is the currency of Japan?",
+    "answers": ["Yen", "Won", "Dollar", "Euro"],
+    "correctAnswer": "Yen"
+  },
+  {
+    "question": "Which organ is responsible for pumping blood in the human body?",
+    "answers": ["Liver", "Brain", "Heart", "Lungs"],
+    "correctAnswer": "Heart"
+  },
+  {
+    "question": "What is the smallest prime number?",
+    "answers": ["1", "2", "3", "4"],
+    "correctAnswer": "2"
+  },
+  {
+    "question": "Which famous scientist developed the theory of relativity?",
+    "answers": ["Isaac Newton", "Albert Einstein", "Galileo Galilei", "Nikola Tesla"],
+    "correctAnswer": "Albert Einstein"
+  },
+  {
+    "question": "What is the largest continent?",
+    "answers": ["Africa", "Asia", "North America", "Europe"],
+    "correctAnswer": "Asia"
+  },
+  {
+    "question": "Which animal is known as the King of the Jungle?",
+    "answers": ["Tiger", "Elephant", "Lion", "Giraffe"],
+    "correctAnswer": "Lion"
+  },
+  {
+    "question": "What is the boiling point of water in Celsius?",
+    "answers": ["100", "90", "80", "110"],
+    "correctAnswer": "100"
+  },
+  {
+    "question": "Which is the longest river in the world?",
+    "answers": ["Amazon", "Nile", "Yangtze", "Mississippi"],
+    "correctAnswer": "Nile"
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "answers": ["Vincent Van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Claude Monet"],
+    "correctAnswer": "Leonardo da Vinci"
+  },
+  {
+    "question": "What is the powerhouse of the cell?",
+    "answers": ["Nucleus", "Mitochondria", "Ribosome", "Endoplasmic Reticulum"],
+    "correctAnswer": "Mitochondria"
+  },
+  {
+    "question": "Which planet is known for its rings?",
+    "answers": ["Mars", "Jupiter", "Saturn", "Neptune"],
+    "correctAnswer": "Saturn"
+  },
+  {
+    "question": "What is the freezing point of water in Celsius?",
+    "answers": ["0", "-10", "32", "100"],
+    "correctAnswer": "0"
+  },
+  {
+    "question": "Which country is known as the Land of the Rising Sun?",
+    "answers": ["China", "Japan", "Thailand", "South Korea"],
+    "correctAnswer": "Japan"
+  },
+  {
+    "question": "What is the largest mammal in the world?",
+    "answers": ["Elephant", "Blue Whale", "Giraffe", "Great White Shark"],
+    "correctAnswer": "Blue Whale"
+  },
+  {
+    "question": "Which is the capital city of Italy?",
+    "answers": ["Venice", "Rome", "Milan", "Florence"],
+    "correctAnswer": "Rome"
+  },
+  {
+    "question": "How many continents are there?",
+    "answers": ["5", "6", "7", "8"],
+    "correctAnswer": "7"
+  },
+  {
+    "question": "Who is known as the Father of Computers?",
+    "answers": ["Alan Turing", "Charles Babbage", "Bill Gates", "Steve Jobs"],
+    "correctAnswer": "Charles Babbage"
+  },
+  {
+    "question": "What is the most widely spoken language in the world?",
+    "answers": ["Spanish", "English", "Mandarin", "Hindi"],
+    "correctAnswer": "Mandarin"
+  },
+  {
+    "question": "Which planet is closest to the Sun?",
+    "answers": ["Venus", "Earth", "Mercury", "Mars"],
+    "correctAnswer": "Mercury"
+  },
+  {
+    "question": "What is the capital of Australia?",
+    "answers": ["Sydney", "Melbourne", "Canberra", "Brisbane"],
+    "correctAnswer": "Canberra"
+  },
+  {
+    "question": "What is the hardest natural substance on Earth?",
+    "answers": ["Gold", "Iron", "Diamond", "Quartz"],
+    "correctAnswer": "Diamond"
+  },
+  {
+    "question": "Who discovered penicillin?",
+    "answers": ["Marie Curie", "Alexander Fleming", "Louis Pasteur", "Isaac Newton"],
+    "correctAnswer": "Alexander Fleming"
+  },
+  {
+    "question": "Which gas makes up most of the Earth's atmosphere?",
+    "answers": ["Oxygen", "Hydrogen", "Nitrogen", "Carbon Dioxide"],
+    "correctAnswer": "Nitrogen"
+  },
+  {
+    "question": "What is the largest internal organ in the human body?",
+    "answers": ["Heart", "Liver", "Lungs", "Kidneys"],
+    "correctAnswer": "Liver"
+  },
+  {
+    "question": "Which sport is known as the 'king of sports'?",
+    "answers": ["Basketball", "Soccer", "Tennis", "Cricket"],
+    "correctAnswer": "Soccer"
+  },
+  {
+    "question": "What is the name of the fairy in Peter Pan?",
+    "answers": ["Cinderella", "Tinker Bell", "Snow White", "Aurora"],
+    "correctAnswer": "Tinker Bell"
+  },
+  {
+    "question": "Which vitamin is known as the sun vitamin?",
+    "answers": ["Vitamin A", "Vitamin C", "Vitamin D", "Vitamin E"],
+    "correctAnswer": "Vitamin D"
+  },
+  {
+    "question": "What is the smallest country in the world?",
+    "answers": ["Monaco", "Vatican City", "San Marino", "Nauru"],
+    "correctAnswer": "Vatican City"
+  },
+  {
+    "question": "What is the main ingredient in guacamole?",
+    "answers": ["Tomato", "Avocado", "Pepper", "Onion"],
+    "correctAnswer": "Avocado"
+  },
+  {
+    "question": "In which galaxy is Earth located?",
+    "answers": ["Andromeda", "Milky Way", "Sombrero", "Whirlpool"],
+    "correctAnswer": "Milky Way"
+  },
+  {
+    "question": "What is the longest bone in the human body?",
+    "answers": ["Femur", "Humerus", "Tibia", "Fibula"],
+    "correctAnswer": "Femur"
+  },
+  {
+    "question": "Which instrument has 88 keys?",
+    "answers": ["Guitar", "Piano", "Violin", "Drum"],
+    "correctAnswer": "Piano"
+  },
+  {
+    "question": "Who was the first President of the United States?",
+    "answers": ["George Washington", "Abraham Lincoln", "Thomas Jefferson", "John Adams"],
+    "correctAnswer": "George Washington"
+  },
+  {
+    "question": "What is the largest planet in our solar system?",
+    "answers": ["Earth", "Mars", "Jupiter", "Saturn"],
+    "correctAnswer": "Jupiter"
+  },
+  {
+    "question": "Which famous battle was fought in 1066?",
+    "answers": ["Battle of Hastings", "Battle of Waterloo", "Battle of Agincourt", "Battle of Gettysburg"],
+    "correctAnswer": "Battle of Hastings"
+  },
+  {
+    "question": "What is the main ingredient in bread?",
+    "answers": ["Flour", "Sugar", "Yeast", "Salt"],
+    "correctAnswer": "Flour"
+  }
+]

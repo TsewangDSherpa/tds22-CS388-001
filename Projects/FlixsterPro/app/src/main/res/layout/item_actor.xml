@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/actorImage"
+        android:layout_width="154dp"
+        android:layout_height="159dp"
+        android:layout_marginStart="2dp"
+        android:background="#FFF7F7"
+        android:padding="1dp"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/actorName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/actorName"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
+        android:background="#FFF7F7"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="Actor Name"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/actorImage" />
+
+    <TextView
+        android:id="@+id/actorPopularity"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="4dp"
+        android:background="#FFF7F7"
+        android:ellipsize="end"
+        android:maxLines="4"
+        android:text="Popularity"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/actorName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

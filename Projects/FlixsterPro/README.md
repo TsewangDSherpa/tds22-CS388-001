@@ -2,49 +2,42 @@
 
 Submitted by: **Tsewang Sherpa**
 
-**FlixsterPro** is a movie browsing app that allows users to browse upcoming movies and learn about it, while also checking out popular actors. 
+**FlixsterPro** is a movie browsing app that allows users to explore upcoming movies, learn about them, and check out popular actors.
 
-Time spent: **4** hours spent in total
+**Time spent:** **4** hours in total
 
 ## Required Features
 
-The following **required** functionality is completed:
+The following **required** functionality has been completed:
 
 - [X] **Choose any endpoint on The MovieDB API except `now_playing`**
-        - Chosen Endpoint: [Upcoming](https://developer.themoviedb.org/reference/movie-upcoming-list)
-                        -  [Popular](https://api.themoviedb.org/3/person/popular)
+    - Chosen Endpoints: [Upcoming](https://developer.themoviedb.org/reference/movie-upcoming-list) and [Popular](https://developer.themoviedb.org/reference/person-popular-list)
 
 - [X] **Make a request to your chosen endpoint and implement a RecyclerView to display all entries**
 - [X] **Use Glide to load and display at least one image per entry**
 - [X] **Click on an entry to view specific details about that entry using Intents**
 
-The following **optional** features are implemented:
+The following **optional** features have been implemented:
 
-- [X] **Add another API call and RecyclerView that lets the user interact with different data.**
-- [X] **Add rounded corners to the images using the Glide transformations**
-- [X] **Implement a shared element transition when user clicks into the details of a movie**
-
+- [X] **Add another API call and RecyclerView that lets the user interact with different data**
+- [X] **Add rounded corners to the images using Glide transformations**
+- [X] **Implement a shared element transition when the user clicks into the details of a movie**
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
+Here's a walkthrough of the implemented user stories: the chosen endpoints on The MovieDB API are implemented, requests are made and displayed in a RecyclerView, images are loaded using Glide, and clicking on an entry shows detailed information. Additionally, the following optional features are also implemented: an additional API call with its own RecyclerView, rounded corners for images with Glide transformations, and a shared element transition for movie details, all demonstrated in the following GIF.
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![Video Walkthrough](./FinalGifAnimation.gif)
 
-<!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+GIF created with [ScreenToGif](https://www.screentogif.com/) for Windows.
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+The beginning was a bit challenging due to dependency issues. I had to clone a repository with compatible dependencies already added, which allowed me to start the project and complete it smoothly.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2024] [TsewangSherpa]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

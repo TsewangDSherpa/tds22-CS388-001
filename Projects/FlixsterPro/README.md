@@ -11,8 +11,9 @@ Time spent: **4** hours spent in total
 The following **required** functionality is completed:
 
 - [X] **Choose any endpoint on The MovieDB API except `now_playing`**
-    - Chosen Endpoint: `[Upcoming](https://developer.themoviedb.org/reference/movie-upcoming-list)`
-                       `[Popular](https://api.themoviedb.org/3/person/popular)`
+        - Chosen Endpoint: [Upcoming](https://developer.themoviedb.org/reference/movie-upcoming-list)
+                        -  [Popular](https://api.themoviedb.org/3/person/popular)
+
 - [X] **Make a request to your chosen endpoint and implement a RecyclerView to display all entries**
 - [X] **Use Glide to load and display at least one image per entry**
 - [X] **Click on an entry to view specific details about that entry using Intents**

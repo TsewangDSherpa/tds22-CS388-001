@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreferenceCompat
+        android:key="cache_articles"
+        android:title="Enable Caching"
+        android:summary="Cache articles for offline access" />
+</PreferenceScreen>

@@ -1,11 +1,12 @@
 package com.sherpa.bitfit
 
 import android.content.Intent
+import android.content.res.Configuration
 import android.os.Bundle
-import android.util.Log
-import android.widget.Button
+
+import android.widget.ImageButton
 import android.widget.TextView
-import android.widget.Toast
+
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -18,13 +19,21 @@ class SleepActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sleep)
+
 
         sleepAdapter = SleepEntryAdapter(sleepEntries) { sleepEntry, position ->
-            // Handle long press event here
             deleteSleepEntry(sleepEntry, position)
         }
 
+        val orientation = resources.configuration.orientation
+        var layoutId = R.layout.activity_sleep
+        if (orientation == Configuration.ORIENTATION_PORTRAIT) {
+            layoutId = R.layout.activity_sleep
+
+        } else if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            layoutId = R.layout.activity_sleep_land
+        }
+        setContentView(layoutId)
         val averageSleepTextView = findViewById<TextView>(R.id.averageSleepTimeTextView)
         val averageHappinessTextView = findViewById<TextView>(R.id.averageHappinessLevelTextView)
 
@@ -58,7 +67,7 @@ class SleepActivity : AppCompatActivity() {
         }
 
         // Button to add new sleep entry
-        findViewById<Button>(R.id.addSleepEntryButton).setOnClickListener {
+        findViewById<ImageButton>(R.id.addSleepEntryButton).setOnClickListener {
             val intent = Intent(this, AddSleepEntryActivity::class.java)
             startActivity(intent)
         }
@@ -85,4 +94,6 @@ class SleepActivity : AppCompatActivity() {
 //            Toast.makeText(this@SleepActivity, "Deleted entry: ${sleepEntry.id} at position: $position", Toast.LENGTH_SHORT).show()
         }
     }
+
+
 }

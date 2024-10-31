@@ -4,49 +4,60 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/textblock"
+    android:padding="24dp">
 
-    android:padding="16dp">
 
     <TextView
         android:id="@+id/dateTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-condensed-light"
+        android:fontFamily="sans-serif-black"
         android:text="Date:"
-        android:textColor="#FDF9FC"
+        android:textColor="#DBDBFF"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/notesTextView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Notes:"
-        android:textColor="#FDF9FC"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/dateTextView" />
 
     <TextView
         android:id="@+id/hoursSleptTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-condensed-light"
+        android:fontFamily="sans-serif-black"
         android:text="Hours Slept:"
-        android:textColor="#FDF9FC"
+        android:textColor="#DBDBFF"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
+    <TextView
+        android:id="@+id/notesTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:paddingTop="16dp"
+        android:text="Notes:"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/feelingTextView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dateTextView" />
+
     <TextView
         android:id="@+id/feelingTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:paddingTop="16dp"
         android:text="Feeling:"
-        android:textColor="#FDF9FC"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/hoursSleptTextView" />
 

@@ -6,4 +6,5 @@ data class SleepEntry(
     val hoursSlept: Float,
     val feeling: String,
     val notes: String
+
 )

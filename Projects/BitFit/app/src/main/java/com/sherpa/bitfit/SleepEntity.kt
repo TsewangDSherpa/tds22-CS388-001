@@ -10,5 +10,5 @@ data class SleepEntity(
     val date: String,
     val hoursSlept: Float,
     val feeling: String,
-    val notes: String
+    val notes: String,
 )

@@ -24,14 +24,16 @@ The following **optional** features are implemented:
 - [X] **Add a daily photo feature**
 
 Additional --
--[X] ** Can delete a specific entry.
+- [X] ** Can delete a specific entry.
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
 <img src='MainGIF.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+## Daily Image Stretch Feature.
 <img src='PhotoGIF.gif' title='Video Walkthrough' width='' alt='Daily Photo Walkthrough' />
+# Orientation Responsivity.
 <img src='RotationGIF.gif' title='Rotation' width='' alt='Video Rotation' />
 
 <!-- Replace this with whatever GIF tool you used! -->

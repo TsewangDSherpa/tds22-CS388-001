@@ -15,4 +15,8 @@ interface SleepDao {
 
     @Query("DELETE FROM sleep_table WHERE id = :id")
     suspend fun delete(id: Long)
+
+    @Query("DELETE FROM sleep_table")
+    suspend fun deleteAll()
+
 }

@@ -2,6 +2,7 @@ package com.sherpa.bitfit
 
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.SeekBar
@@ -9,10 +10,17 @@ import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import kotlinx.coroutines.Dispatchers.IO
+import com.loopj.android.http.AsyncHttpClient
+import com.loopj.android.http.JsonHttpResponseHandler
+import cz.msebera.android.httpclient.Header
+
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import org.json.JSONObject
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
+import kotlinx.coroutines.CompletableDeferred
 
 class AddSleepEntryActivity : AppCompatActivity() {
 
@@ -35,10 +43,10 @@ class AddSleepEntryActivity : AppCompatActivity() {
         hoursSleptTextView = findViewById(R.id.hoursSleptTextView)
         feelingTextView = findViewById(R.id.feelingTextView)
 
-        // Set max value for the hours slept SeekBar
-        hoursSleptSeekBar.max = 96 // 24 hours in 15-minute increments
 
-        // Set up listener for the hours slept SeekBar
+        hoursSleptSeekBar.max = 96 
+
+
         hoursSleptSeekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
                 val hours = progress * 0.25 // 0.25 hours per increment (15 mins)
@@ -61,28 +69,52 @@ class AddSleepEntryActivity : AppCompatActivity() {
 
         // Handle submit button click
         submitButton.setOnClickListener {
-            val hoursSlept = hoursSleptSeekBar.progress * 0.25
-            val feeling = feelingSeekBar.progress
-            val notes = notesEditText.text.toString()
-            println("Hours Slept: $hoursSlept, Feeling: $feeling, Notes: $notes")
-            lifecycleScope.launch(IO) {
-                (application as SleepApplication).db.sleepDao().insert(
-                    SleepEntity(
-                        hoursSlept = hoursSlept.toFloat(),
-                        feeling = feeling.toString(),
-                        date = getCurrentDate(),
-                        notes = notes
-                    )
-                )
-            }
+            lifecycleScope.launch {
+                val imageUrl = fetchApiResponse()
+                val hoursSlept = hoursSleptSeekBar.progress * 0.25
+                val feeling = feelingSeekBar.progress
+                val notes = notesEditText.text.toString()
+                Log.v("AddSleepEntryActivity", "Hours Slept: $hoursSlept, Feeling: $feeling, Notes: $imageUrl")
 
-            finish()
+                withContext(Dispatchers.IO) {
+                    (application as SleepApplication).db.sleepDao().insert(
+                        SleepEntity(
+                            hoursSlept = hoursSlept.toFloat(),
+                            feeling = feeling.toString(),
+                            date = getCurrentDate(),
+                            notes = notes,
+                            imageUrl = imageUrl
+                        )
+                    )
+                }
+                finish()
+            }
         }
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
     private fun getCurrentDate(): String {
-        val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy") // Change pattern as needed
+        val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
         return LocalDate.now().format(formatter)
+    }
+
+    private suspend fun fetchApiResponse(): String {
+        val client = AsyncHttpClient()
+        val promise = CompletableDeferred<String>()
+
+        client.get("https://yesno.wtf/api", object : JsonHttpResponseHandler() {
+            override fun onSuccess(statusCode: Int, headers: Array<out Header>?, response: JSONObject) {
+                val imageUrl = response.getString("image")
+                Log.v("AddSleepEntryActivity", "Fetched Image URL: $imageUrl")
+                promise.complete(imageUrl)
+            }
+
+            override fun onFailure(statusCode: Int, headers: Array<out Header>?, throwable: Throwable?, errorResponse: JSONObject?) {
+                Log.v("AddSleepEntryActivity", "Failed to fetch API response", throwable)
+                promise.complete("")
+            }
+        })
+
+        return promise.await()
     }
 }

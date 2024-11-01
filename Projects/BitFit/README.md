@@ -21,7 +21,7 @@ The following **optional** features are implemented:
 - [X] **Create a UI for tracking averages and trends in metrics**
 - [X] **Improve and customize the user interface through styling and coloring**
 - [X] **Implement orientation responsivity**
-- [ ] **Add a daily photo feature**
+- [X] **Add a daily photo feature**
 
 Additional --
 -[X] ** Can delete a specific entry.
@@ -31,17 +31,17 @@ Additional --
 Here's a walkthrough of implemented user stories:
 
 <img src='MainGIF.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='PhotoGIF.gif' title='Video Walkthrough' width='' alt='Daily Photo Walkthrough' />
 <img src='RotationGIF.gif' title='Rotation' width='' alt='Video Rotation' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...
 <!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+
 
 ## Notes
-Using local database to store the sleep schedule for personal benefit. 
+Using local database to store the sleep schedule for personal benefit. Also for daily photo, I am getting a random gif from "https://yesno.wtf/api"
 
 
 ## License

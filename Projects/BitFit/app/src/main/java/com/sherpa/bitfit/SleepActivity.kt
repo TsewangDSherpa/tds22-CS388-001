@@ -3,15 +3,21 @@ package com.sherpa.bitfit
 import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
+import android.util.Log
+
 
 import android.widget.ImageButton
 import android.widget.TextView
+
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+
 import kotlinx.coroutines.launch
+
+
 class SleepActivity : AppCompatActivity() {
 
     private lateinit var sleepAdapter: SleepEntryAdapter
@@ -41,36 +47,51 @@ class SleepActivity : AppCompatActivity() {
         recyclerView.adapter = sleepAdapter
         recyclerView.layoutManager = LinearLayoutManager(this)
 
+
+
         lifecycleScope.launch {
-            (application as SleepApplication).db.sleepDao().getAll().collect { databaseList ->
-                databaseList.map { entity ->
-                    SleepEntry(
-                        entity.id,
-                        entity.date,
-                        entity.hoursSlept,
-                        entity.feeling,
-                        entity.notes
-                    )
-                }.also { mappedList ->
-                    sleepEntries.clear()
-                    sleepEntries.addAll(mappedList)
-                    sleepAdapter.notifyDataSetChanged()
+            try {
+                (application as SleepApplication).db.sleepDao().getAll().collect { databaseList ->
+                    databaseList.map { entity ->
+                        Log.d("SleepActivity", "Image URL: ${entity.imageUrl}")
+                        SleepEntry(
+                            entity.id,
+                            entity.date,
+                            entity.hoursSlept,
+                            entity.feeling,
+                            entity.notes,
+                            entity.imageUrl
+                        )
 
-                    // Calculate and display average sleep time and happiness level
-                    val averageSleep = calculateAverageSleep(sleepEntries)
-                    val averageHappiness = calculateAverageHappiness(sleepEntries)
+                    }.also { mappedList ->
+                        sleepEntries.clear()
+                        sleepEntries.addAll(mappedList)
+                        sleepAdapter.notifyDataSetChanged()
 
-                    averageSleepTextView.text = "Average Sleep Time: %.2f hours".format(averageSleep)
-                    averageHappinessTextView.text = "Average Happiness Level: %.1f/10".format(averageHappiness)
+                        // Calculate and display average sleep time and happiness level
+                        val averageSleep = calculateAverageSleep(sleepEntries)
+                        val averageHappiness = calculateAverageHappiness(sleepEntries)
+
+                        averageSleepTextView.text = "Average Sleep Time: %.2f hours".format(averageSleep)
+                        averageHappinessTextView.text = "Average Happiness Level: %.1f/10".format(averageHappiness)
+                    }
                 }
+            } catch (e: Exception) {
+                Log.e("SleepActivity", "Error fetching data: ${e.message}", e)
+
             }
         }
+
 
         // Button to add new sleep entry
         findViewById<ImageButton>(R.id.addSleepEntryButton).setOnClickListener {
             val intent = Intent(this, AddSleepEntryActivity::class.java)
             startActivity(intent)
         }
+
+
+
+
     }
 
     private fun calculateAverageSleep(entries: List<SleepEntry>): Double {
@@ -94,6 +115,9 @@ class SleepActivity : AppCompatActivity() {
 //            Toast.makeText(this@SleepActivity, "Deleted entry: ${sleepEntry.id} at position: $position", Toast.LENGTH_SHORT).show()
         }
     }
+
+
+
 
 
 }

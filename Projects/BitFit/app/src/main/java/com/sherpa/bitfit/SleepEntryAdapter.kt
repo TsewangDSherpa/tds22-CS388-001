@@ -1,11 +1,12 @@
 package com.sherpa.bitfit
 
+import android.content.Context
+import android.content.Intent
 import android.content.res.Configuration
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 
 class SleepEntryAdapter(
@@ -44,6 +45,18 @@ class SleepEntryAdapter(
         holder.itemView.setOnLongClickListener {
             onLongClick(entry, position) // Pass entry and position
             true // Indicate that the event has been handled
+        }
+
+        holder.itemView.setOnClickListener {
+            val context = holder.itemView.context
+            val intent = Intent(context, SleepDetailActivity::class.java).apply {
+                putExtra("HOURS_SLEPT", entry.hoursSlept)
+                putExtra("FEELING", entry.feeling)
+                putExtra("NOTES", entry.notes)
+                putExtra("DATE", entry.date)
+                putExtra("IMAGE_URL", entry.imageUrl)
+            }
+            context.startActivity(intent)
         }
     }
 

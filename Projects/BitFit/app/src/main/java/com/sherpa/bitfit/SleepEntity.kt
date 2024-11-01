@@ -11,4 +11,6 @@ data class SleepEntity(
     val hoursSlept: Float,
     val feeling: String,
     val notes: String,
+    var imageUrl: String
+
 )

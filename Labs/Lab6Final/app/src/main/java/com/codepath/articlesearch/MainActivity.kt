@@ -1,7 +1,6 @@
 package com.codepath.articlesearch
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -32,6 +31,7 @@ class MainActivity : AppCompatActivity() {
         // Define your fragments
         val bestSellerBooksFragment: Fragment = BestSellerBooksFragment()
         val articleListFragment: Fragment = ArticleListFragment()
+        val popularArticleListFragment: Fragment = PopularArticleListFragment()
 
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation)
 
@@ -40,6 +40,7 @@ class MainActivity : AppCompatActivity() {
             val fragment: Fragment = when (item.itemId) {
                 R.id.nav_books -> bestSellerBooksFragment
                 R.id.nav_articles -> articleListFragment
+                R.id.nav_home -> popularArticleListFragment
                 else -> bestSellerBooksFragment
             }
             replaceFragment(fragment)
@@ -47,7 +48,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Set default selection
-        bottomNavigationView.selectedItemId = R.id.nav_books
+        bottomNavigationView.selectedItemId = R.id.nav_home
     }
 
     private fun replaceFragment(fragment: Fragment) {

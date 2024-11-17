@@ -16,15 +16,15 @@ The following **required** functionality is completed:
 
 - [X] (3 pts) **Add and implement Bottom Navigation to your application**
     - Allows navigation between books and articles using Bottom Navigation.
-    - ![GIF showing Bottom Navigation functionality](./First.gif) <!-- Replace this link with your actual image/GIF link -->
+    - ![GIF showing Bottom Navigation functionality](./First.gif) 
 
 - [X] (4 pts) **Dynamically use fragments within Activities**
     - Displays books and articles in their respective fragments, dynamically managed within the main activity.
-    - ![GIF showing fragment management](./First.gif) <!-- Replace this link with your actual image/GIF link -->
+    - ![GIF showing fragment management](./First.gif) 
 
 - [X] (3 pts) **Customize the toolbar and icons**
     - Provides a unique toolbar experience for each section with relevant icons.
-    - ![GIF showing toolbar customization](./GIF3.gif) <!-- Replace this link with your actual image/GIF link -->
+    - ![GIF showing toolbar customization](./GIF3.gif) 
 
 ### Stretch Features
 
@@ -35,11 +35,11 @@ The following **stretch** functionality is implemented:
     - ![GIF showing orientation change handling](./HomeScreen.gif)
 - [X] (2 pts) **Respond to device orientation changes without resetting the application**
     - Ensures app content maintains its state across orientation changes.
-    - ![GIF showing orientation change handling](./Orientation.gif) <!-- Replace this link with your actual image/GIF link -->
+    - ![GIF showing orientation change handling](./Orientation.gif) 
 
 ## Notes
 
-No Challenges, everything was smooth and easy to understand. <!-- Replace this with your specific challenges and experiences -->
+No Challenges, everything was smooth and easy to understand. 
 
 ## Resources
 

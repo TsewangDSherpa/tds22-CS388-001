@@ -20,9 +20,9 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        val intent = Intent(this, SleepActivity::class.java)
-        startActivity(intent)
-        finish()
+//        val intent = Intent(this, SleepActivity::class.java)
+//        startActivity(intent)
+//        finish()
     }
 
 

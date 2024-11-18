@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8778A9"
+    tools:context=".SleepActivityFragment">
+
+    <TextView
+        android:id="@+id/averageSleepTimeTextView"
+        android:layout_width="410dp"
+        android:layout_height="81dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#ADB2D9"
+        android:fontFamily="monospace"
+        android:text="Sleep Journal"
+        android:paddingTop="20dp"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/article_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="622dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/plainbg"
+        tools:listitem="@layout/item_sleep_entry" />
+
+</FrameLayout>

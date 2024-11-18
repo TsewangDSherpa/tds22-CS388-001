@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
-
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
@@ -15,14 +14,13 @@ import com.github.mikephil.charting.charts.LineChart
 import kotlinx.coroutines.launch
 
 class DashboardFragment : Fragment() {
-
     private lateinit var sleepTrendChart: LineChart
-    private val avgSleepText: TextView by lazy {
-        requireView().findViewById(R.id.averageSleepTimeTextView)
-    }
-    private val avgHappinessText: TextView by lazy {
-        requireView().findViewById(R.id.averageHappinessLevelTextView)
-    }
+    private lateinit var avgSleepText: TextView
+    private lateinit var avgHappinessText: TextView
+
+    // Initialize sleepEntries as an empty list to avoid null issues
+    private var sleepEntries: List<SleepEntry> = emptyList()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -30,6 +28,7 @@ class DashboardFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_dashboard, container, false)
 
+        // Initialize the chart
         sleepTrendChart = view.findViewById(R.id.sleepTrendChart)
 
         // Fetch data and update UI
@@ -40,9 +39,17 @@ class DashboardFragment : Fragment() {
         return view
     }
 
+    // Move view initialization to onViewCreated to avoid issues with lazy initialization
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        avgSleepText = view.findViewById(R.id.averageSleepTimeTextView)
+        avgHappinessText = view.findViewById(R.id.averageHappinessLevelTextView)
+    }
+
     private suspend fun fetchSleepData() {
         (activity?.application as SleepApplication).db.sleepDao().getAll().collect { databaseList ->
-            val sleepEntries = databaseList.map { entity ->
+            // Map the database list to SleepEntry objects
+            val sleepEntriesC = databaseList.map { entity ->
                 SleepEntry(
                     id = entity.id,
                     date = entity.date,
@@ -52,25 +59,47 @@ class DashboardFragment : Fragment() {
                     imageUrl = entity.imageUrl
                 )
             }
+            // Update sleepEntries and refresh the UI
+            sleepEntries = sleepEntriesC
             displaySleepTrend(sleepEntries)
+            updateAverageText(sleepEntries)
         }
     }
 
-    private fun displaySleepTrend(entries: List<SleepEntry>) {
-        val entriesForChart = entries.mapIndexed { index, entry ->
-            Entry(index.toFloat(), entry.hoursSlept.toFloat())
-        }
-
+    private fun updateAverageText(entries: List<SleepEntry>) {
         val avgSleep = returnAverageSleep(entries)
         val avgHappiness = returnAverageHappiness(entries)
 
         avgSleepText.text = "Average Sleep Time: $avgSleep hours"
         avgHappinessText.text = "Average Happiness Level: $avgHappiness/10"
+    }
 
+    override fun onResume() {
+        super.onResume()
+        // Make sure sleepEntries has been fetched before using it
+        if (sleepEntries.isNotEmpty()) {
+            updateAverageText(sleepEntries)
+        }
+    }
+
+    private fun displaySleepTrend(entries: List<SleepEntry>) {
+        if (entries.isEmpty()) {
+            sleepTrendChart.visibility = View.GONE
+            return
+        }
+
+        // Map the sleep data to chart entries
+        val entriesForChart = entries.mapIndexed { index, entry ->
+            Entry(index.toFloat(), entry.hoursSlept.toFloat())
+        }
+
+        // Set up the LineDataSet for the chart
         val dataSet = LineDataSet(entriesForChart, "Sleep Trend")
-        dataSet.color = R.color.teal
-        dataSet.valueTextColor = R.color.black
+        dataSet.color = resources.getColor(R.color.teal, null)
+        dataSet.valueTextColor = resources.getColor(R.color.black, null)
         dataSet.lineWidth = 2f
+
+        // Configure the chart
         sleepTrendChart.description.text = "Track your sleeping trend"
         sleepTrendChart.axisRight.isEnabled = false
         val lineData = LineData(dataSet)
@@ -86,7 +115,8 @@ class DashboardFragment : Fragment() {
         for (entry in sleepEntries) {
             totalHours += entry.hoursSlept
         }
-        return totalHours / sleepEntries.size
+
+        return String.format("%.2f", totalHours / sleepEntries.size).toFloat()
     }
 
     fun returnAverageHappiness(sleepEntries: List<SleepEntry>): Float {
@@ -96,6 +126,8 @@ class DashboardFragment : Fragment() {
         for (entry in sleepEntries) {
             totalHappiness += entry.feeling.toFloat()
         }
-        return totalHappiness / sleepEntries.size
+
+        return String.format("%.2f", totalHappiness / sleepEntries.size).toFloat()
     }
+
 }

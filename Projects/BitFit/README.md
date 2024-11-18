@@ -30,9 +30,8 @@ Here's a walkthrough of implemented user stories that shows Bottom Navigation wi
 
 
 
-<!-- Replace this with whatever GIF tool you used! -->
+
 GIF created with ...
-<!-- Recommended tools:
 [ScreenToGif](https://www.screentogif.com/) for Windows
 
 

@@ -24,13 +24,11 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
+Here's a walkthrough of implemented user stories that shows Bottom Navigation with Dashboard:
 
-<img src='MainGIF.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-## Daily Image Stretch Feature.
-<img src='PhotoGIF.gif' title='Video Walkthrough' width='' alt='Daily Photo Walkthrough' />
-# Orientation Responsivity.
-<img src='RotationGIF.gif' title='Rotation' width='' alt='Video Rotation' />
+<img src='FinalGIF.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...

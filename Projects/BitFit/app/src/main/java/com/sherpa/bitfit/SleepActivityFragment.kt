@@ -50,13 +50,10 @@ class SleepActivityFragment : Fragment() {
 //            (application as SleepApplication).db.sleepDao().delete(sleepEntry.id)
             (activity?.application as SleepApplication).db.sleepDao().delete(sleepEntry.id)
 
-            // Remove from the list and update UI after deletion is confirmed
+
             sleepEntries.removeAt(position)
             sleepAdapter.notifyItemRemoved(position)
-
-            // Show a toast message
-            Toast.makeText(context, "Deleted entry: ${sleepEntry.id} at position: $position", Toast.LENGTH_SHORT).show()
-        }
+         }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

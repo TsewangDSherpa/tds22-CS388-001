@@ -11,6 +11,7 @@ import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
 import com.github.mikephil.charting.charts.LineChart
+import com.github.mikephil.charting.components.XAxis
 import kotlinx.coroutines.launch
 
 class DashboardFragment : Fragment() {
@@ -76,7 +77,7 @@ class DashboardFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        // Make sure sleepEntries has been fetched before using it
+
         if (sleepEntries.isNotEmpty()) {
             updateAverageText(sleepEntries)
         }
@@ -88,24 +89,31 @@ class DashboardFragment : Fragment() {
             return
         }
 
-        // Map the sleep data to chart entries
         val entriesForChart = entries.mapIndexed { index, entry ->
-            Entry(index.toFloat(), entry.hoursSlept.toFloat())
+            Entry(index.toFloat() + 1, entry.hoursSlept.toFloat()) // X-axis step of 1
         }
 
-        // Set up the LineDataSet for the chart
         val dataSet = LineDataSet(entriesForChart, "Sleep Trend")
         dataSet.color = resources.getColor(R.color.teal, null)
         dataSet.valueTextColor = resources.getColor(R.color.black, null)
         dataSet.lineWidth = 2f
 
         // Configure the chart
-        sleepTrendChart.description.text = "Track your sleeping trend"
+        sleepTrendChart.description.text = "Track your sleep per day!"
         sleepTrendChart.axisRight.isEnabled = false
+
+        // Configure the X-axis
+        val xAxis = sleepTrendChart.xAxis
+        xAxis.granularity = 1f
+        xAxis.position = XAxis.XAxisPosition.BOTTOM
+        xAxis.setDrawGridLines(false)
+
+        // Add the data and refresh the chart
         val lineData = LineData(dataSet)
         sleepTrendChart.data = lineData
         sleepTrendChart.invalidate()
     }
+
 
 
     fun returnAverageSleep(sleepEntries: List<SleepEntry>): Float {

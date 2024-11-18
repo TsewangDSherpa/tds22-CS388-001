@@ -2,7 +2,7 @@
 
 Submitted by: **Tsewang Sherpa**
 
-**BitFit** is a health metrics app that allows users to track ... 
+**BitFit** is a health metrics app that allows users to track user's sleep schedule and see the graph that shows sleeping trend along with avg sleep and avg happiness. 
 
 Time spent: **3** hours spent in total
 

@@ -40,7 +40,7 @@ If you encounter any issues or have questions about the labs or projects, please
 
 Happy coding - Android Development class!
 
-<img src="FlowChart.svg" alt="Alt text" width="200">
+<img src="FlowChart.svg" alt="Alt text" width="auto">
 
 
 

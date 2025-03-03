@@ -40,7 +40,7 @@ If you encounter any issues or have questions about the labs or projects, please
 
 Happy coding - Android Development class!
 
-![FlowChart](flowchart.svg)
+![FlowChart](FlowChart.svg)
 
 
 
